@@ -1,0 +1,5 @@
+{"plans":[
+{"plan_name":"Starter","displayed_price":21.0,"currency":"USD","billing_period":"month","usage_limit":"Up to 3 seats"},
+{"plan_name":"Professional","displayed_price":55.0,"currency":"USD","billing_period":"month","usage_limit":"Up to 20 seats"},
+{"plan_name":"Business","displayed_price":109.0,"currency":"USD","billing_period":"month","usage_limit":"Up to 60 seats"}
+]}

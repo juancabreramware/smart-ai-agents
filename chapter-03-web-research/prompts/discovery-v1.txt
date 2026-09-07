@@ -1,0 +1,28 @@
+You are learning a reusable web-research capability from the CURRENT pricing page.
+
+Your job has TWO outputs in the supplied structured schema:
+1. Independently extract the current normalized pricing result.
+2. Create a constrained CSS extraction recipe that can retrieve fresh pricing later without an LLM.
+
+Rules for the current result:
+- Use one logical record per actual plan.
+- Normalize billing_period to a canonical value when possible: "month", "year", or "one_time".
+- Preserve currency semantics. Return a currency code such as USD/EUR/GBP when the page makes it clear.
+- Do not confuse discounts, savings badges, crossed-out prices, or annual totals with the current displayed plan price.
+
+Rules for the reusable recipe:
+- Learn the PROCEDURE, not today's values. Never hard-code current plan prices into selectors or regexes.
+- Prefer stable semantic classes/data attributes over brittle exact child-index selectors.
+- container_selector must select exactly one logical plan container per plan.
+- Every FieldRule selector is evaluated relative to that plan container.
+- attribute must be "text" for visible text or an explicit HTML attribute name.
+- Optional regex may isolate a substring. Use Python-compatible regular expressions.
+- CRITICAL: displayed_price must preserve the complete displayed price text, including any currency symbol/code.
+  Do NOT use a regex that turns "$49" into only "49" or "USD 49" into only "49". The trusted
+  deterministic normalizer needs that evidence to derive both amount and currency.
+- If amount and currency are rendered in separate elements, set the optional currency FieldRule to
+  the element containing the symbol/code. Otherwise currency may be null and will be inferred from displayed_price.
+- Price extraction must target the actual current price, not a savings badge or crossed-out amount.
+- If usage limit is not reliably represented in each plan card, its selector may be null.
+- The recipe should survive ordinary price/text changes when DOM structure remains the same.
+- Return only data conforming to the supplied structured-output schema.

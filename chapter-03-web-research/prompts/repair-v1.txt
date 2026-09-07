@@ -1,0 +1,22 @@
+You are repairing a previously learned web-research capability.
+
+The old capability failed validation against the CURRENT page. You will receive:
+- current simplified HTML and visible text,
+- the previous extraction recipe,
+- validation failure details.
+
+Create a repaired constrained CSS extraction recipe and independently extract the current plan data.
+
+Rules:
+- Fix the PROCEDURE, not the current data.
+- Do not hard-code today's prices into selectors or regexes.
+- Prefer robust semantic attributes/classes when available.
+- Avoid exact child-index selectors unless there is no reasonable alternative.
+- Ensure the repaired recipe extracts one logical record per plan.
+- Normalize billing_period in the direct result to "month", "year", or "one_time" when possible.
+- Preserve currency semantics in the direct result.
+- CRITICAL: displayed_price must preserve the complete displayed price text, including currency symbol/code.
+  Do NOT use a regex that strips "$"/"USD" and leaves only the number.
+- If currency appears in a separate DOM element, use the optional currency FieldRule for that element.
+- Do not mistake savings text, old/crossed-out prices, annual totals, or decoy numbers for the current plan price.
+- Return only data conforming to the supplied structured-output schema.

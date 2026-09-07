@@ -1,0 +1,10 @@
+experiment_id: chapter3-full-v1
+controlled_site:
+  host: 127.0.0.1
+  port: 8765
+  initial_version: v1
+  changed_version: v2
+# Canonical Chapter 3 benchmark counts. Review your selected model's pricing first.
+v1_executions: 100
+v2_executions: 50
+pause_seconds: 0.10

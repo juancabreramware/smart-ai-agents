@@ -1,0 +1,36 @@
+name: Chapter 3 tests
+
+on:
+  push:
+    paths:
+      - 'chapter-03-web-research/**'
+      - '.github/workflows/chapter-03-tests.yml'
+  pull_request:
+    paths:
+      - 'chapter-03-web-research/**'
+      - '.github/workflows/chapter-03-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: chapter-03-web-research/requirements.txt
+      - name: Install dependencies
+        working-directory: chapter-03-web-research
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run tests
+        working-directory: chapter-03-web-research
+        run: pytest -q

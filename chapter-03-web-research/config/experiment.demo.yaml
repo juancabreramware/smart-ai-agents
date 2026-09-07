@@ -1,0 +1,9 @@
+experiment_id: chapter3-demo
+controlled_site:
+  host: 127.0.0.1
+  port: 8765
+  initial_version: v1
+  changed_version: v2
+v1_executions: 5
+v2_executions: 3
+pause_seconds: 0.15

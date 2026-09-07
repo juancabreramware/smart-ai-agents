@@ -1,0 +1,18 @@
+# Copy to live_vendors.yaml and edit. Public sites change constantly, so the book
+# does not hard-code three vendors that may be irrelevant by the time you read it.
+vendors:
+  - id: vendor_a
+    name: Vendor A
+    domain: example.com
+    pricing_url: null
+    search_query: "site:example.com pricing plans"
+  - id: vendor_b
+    name: Vendor B
+    domain: example.org
+    pricing_url: null
+    search_query: "site:example.org pricing plans"
+  - id: vendor_c
+    name: Vendor C
+    domain: example.net
+    pricing_url: null
+    search_query: "site:example.net pricing plans"

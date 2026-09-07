@@ -1,0 +1,61 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Chapter 3 runtime state / generated experiment output
+chapter-03-web-research/benchmark/results/*
+!chapter-03-web-research/benchmark/results/.gitkeep
+chapter-03-web-research/capabilities/registry/*.json
+!chapter-03-web-research/capabilities/registry/.gitkeep
+chapter-03-web-research/config/live_vendors.yaml
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+~$*
+tmp/
+temp/
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build / packaging artifacts
+build/
+dist/
+*.egg-info/
+*.whl
+
+# Local benchmark exports / notebooks
+*.ipynb_checkpoints/
