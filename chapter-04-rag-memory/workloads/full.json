@@ -1,0 +1,2513 @@
+[
+  {
+    "query_id": "q001",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_price_monthly",
+    "query": "What does Starter cost per month?",
+    "expected": {
+      "value": 29
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q002",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_price_monthly",
+    "query": "Monthly price for Starter?",
+    "expected": {
+      "value": 29
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q003",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_price_monthly",
+    "query": "How much is the Starter plan?",
+    "expected": {
+      "value": 29
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q004",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_price_monthly",
+    "query": "What is Northstar Starter monthly pricing?",
+    "expected": {
+      "value": 29
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q005",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_price_monthly",
+    "query": "What does Professional cost monthly?",
+    "expected": {
+      "value": 99
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q006",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_price_monthly",
+    "query": "Professional monthly price?",
+    "expected": {
+      "value": 99
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q007",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_price_monthly",
+    "query": "How much is the Professional plan per month?",
+    "expected": {
+      "value": 99
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q008",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_price_monthly",
+    "query": "What is Northstar Professional pricing?",
+    "expected": {
+      "value": 99
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q009",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "annual_discount_percentage",
+    "query": "What is the annual billing discount?",
+    "expected": {
+      "value": 15
+    },
+    "expected_sources": [
+      "billing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q010",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "annual_discount_percentage",
+    "query": "How much do I save with annual billing?",
+    "expected": {
+      "value": 15
+    },
+    "expected_sources": [
+      "billing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q011",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "annual_discount_percentage",
+    "query": "Annual discount percentage?",
+    "expected": {
+      "value": 15
+    },
+    "expected_sources": [
+      "billing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q012",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "annual_discount_percentage",
+    "query": "What discount is offered for yearly billing?",
+    "expected": {
+      "value": 15
+    },
+    "expected_sources": [
+      "billing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q013",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "What is the Starter API rate limit?",
+    "expected": {
+      "value": 1000
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q014",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "How many API calls per hour does Starter allow?",
+    "expected": {
+      "value": 1000
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q015",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "Starter request limit?",
+    "expected": {
+      "value": 1000
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q016",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "Hourly API quota for Starter?",
+    "expected": {
+      "value": 1000
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q017",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_api_limit_hourly",
+    "query": "What is the Professional API rate limit?",
+    "expected": {
+      "value": 10000
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q018",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_api_limit_hourly",
+    "query": "How many API calls per hour does Professional allow?",
+    "expected": {
+      "value": 10000
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q019",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_api_limit_hourly",
+    "query": "Professional request limit?",
+    "expected": {
+      "value": 10000
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q020",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_api_limit_hourly",
+    "query": "Hourly API quota for Professional?",
+    "expected": {
+      "value": 10000
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q021",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "How long are backups retained?",
+    "expected": {
+      "value": 30
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q022",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "What is the backup retention period?",
+    "expected": {
+      "value": 30
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q023",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "For how many days does Northstar keep backups?",
+    "expected": {
+      "value": 30
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q024",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "Backup retention in days?",
+    "expected": {
+      "value": 30
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q025",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "application_log_retention_days",
+    "query": "How long are production application logs retained?",
+    "expected": {
+      "value": 14
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q026",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "application_log_retention_days",
+    "query": "Application log retention period?",
+    "expected": {
+      "value": 14
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q027",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "application_log_retention_days",
+    "query": "How many days are app logs kept?",
+    "expected": {
+      "value": 14
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q028",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "application_log_retention_days",
+    "query": "Production logs retention?",
+    "expected": {
+      "value": 14
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q029",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "deleted_account_retention_days",
+    "query": "How long is deleted account data retained?",
+    "expected": {
+      "value": 7
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q030",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "deleted_account_retention_days",
+    "query": "When is closed-account data permanently deleted?",
+    "expected": {
+      "value": 7
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q031",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "deleted_account_retention_days",
+    "query": "Deleted account retention period?",
+    "expected": {
+      "value": 7
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q032",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "deleted_account_retention_days",
+    "query": "How many days after closure is account data kept?",
+    "expected": {
+      "value": 7
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q033",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_audit_log_retention_days",
+    "query": "How long are Enterprise audit logs retained?",
+    "expected": {
+      "value": 365
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q034",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_audit_log_retention_days",
+    "query": "Enterprise audit log retention?",
+    "expected": {
+      "value": 365
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q035",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_audit_log_retention_days",
+    "query": "How many days of audit logs does Enterprise keep?",
+    "expected": {
+      "value": 365
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q036",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_audit_log_retention_days",
+    "query": "Audit history retention for Enterprise?",
+    "expected": {
+      "value": 365
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q037",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_support_level",
+    "query": "What support does Starter include?",
+    "expected": {
+      "value": "business-day email support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q038",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_support_level",
+    "query": "Starter support level?",
+    "expected": {
+      "value": "business-day email support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q039",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_support_level",
+    "query": "How is Starter supported?",
+    "expected": {
+      "value": "business-day email support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q040",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_support_level",
+    "query": "What customer support comes with Starter?",
+    "expected": {
+      "value": "business-day email support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q041",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_support_level",
+    "query": "What support does Professional include?",
+    "expected": {
+      "value": "24/5 support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q042",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_support_level",
+    "query": "Professional support level?",
+    "expected": {
+      "value": "24/5 support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q043",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_support_level",
+    "query": "Does Professional have 24/5 support?",
+    "expected": {
+      "value": "24/5 support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q044",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_support_level",
+    "query": "How is Professional supported?",
+    "expected": {
+      "value": "24/5 support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q045",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_support_level",
+    "query": "What support does Enterprise include?",
+    "expected": {
+      "value": "24/7 support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q046",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_support_level",
+    "query": "Enterprise support level?",
+    "expected": {
+      "value": "24/7 support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q047",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_support_level",
+    "query": "Does Enterprise have 24/7 support?",
+    "expected": {
+      "value": "24/7 support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q048",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_support_level",
+    "query": "How is Enterprise supported?",
+    "expected": {
+      "value": "24/7 support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q049",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "eu_regions",
+    "query": "Where is Northstar hosted in the EU?",
+    "expected": {
+      "value": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q050",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "eu_regions",
+    "query": "What EU regions does Northstar have?",
+    "expected": {
+      "value": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q051",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "eu_regions",
+    "query": "European data region?",
+    "expected": {
+      "value": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q052",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "eu_regions",
+    "query": "Which European regions are available?",
+    "expected": {
+      "value": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q053",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "cancellation_effective_time",
+    "query": "When does a cancellation take effect?",
+    "expected": {
+      "value": "end of the current paid billing period"
+    },
+    "expected_sources": [
+      "cancellations.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q054",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "cancellation_effective_time",
+    "query": "If I cancel, when does service end?",
+    "expected": {
+      "value": "end of the current paid billing period"
+    },
+    "expected_sources": [
+      "cancellations.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q055",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "cancellation_effective_time",
+    "query": "Cancellation effective date?",
+    "expected": {
+      "value": "end of the current paid billing period"
+    },
+    "expected_sources": [
+      "cancellations.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q056",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "cancellation_effective_time",
+    "query": "How long do I keep access after canceling?",
+    "expected": {
+      "value": "end of the current paid billing period"
+    },
+    "expected_sources": [
+      "cancellations.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q057",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "slack_integration_plans",
+    "query": "Which plans include Slack integration?",
+    "expected": {
+      "value": [
+        "Professional",
+        "Enterprise"
+      ]
+    },
+    "expected_sources": [
+      "integrations.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q058",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "slack_integration_plans",
+    "query": "Is Slack available on Professional?",
+    "expected": {
+      "value": [
+        "Professional",
+        "Enterprise"
+      ]
+    },
+    "expected_sources": [
+      "integrations.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q059",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "slack_integration_plans",
+    "query": "What plans support native Slack?",
+    "expected": {
+      "value": [
+        "Professional",
+        "Enterprise"
+      ]
+    },
+    "expected_sources": [
+      "integrations.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q060",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "slack_integration_plans",
+    "query": "Slack integration availability?",
+    "expected": {
+      "value": [
+        "Professional",
+        "Enterprise"
+      ]
+    },
+    "expected_sources": [
+      "integrations.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q061",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "sso_saml_plan",
+    "query": "Which plan includes SSO/SAML?",
+    "expected": {
+      "value": "Enterprise"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q062",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "sso_saml_plan",
+    "query": "Is SSO available on Enterprise?",
+    "expected": {
+      "value": "Enterprise"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q063",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "sso_saml_plan",
+    "query": "What plan supports SAML?",
+    "expected": {
+      "value": "Enterprise"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q064",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "sso_saml_plan",
+    "query": "SSO/SAML availability?",
+    "expected": {
+      "value": "Enterprise"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q065",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_price_monthly",
+    "query": "Starter monthly fee?",
+    "expected": {
+      "value": 29
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q066",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_price_monthly",
+    "query": "Professional monthly fee?",
+    "expected": {
+      "value": 99
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q067",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "annual_discount_percentage",
+    "query": "Northstar annual billing savings?",
+    "expected": {
+      "value": 15
+    },
+    "expected_sources": [
+      "billing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q068",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "How many requests can Starter make each hour?",
+    "expected": {
+      "value": 1000
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q069",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_api_limit_hourly",
+    "query": "How many requests can Professional make each hour?",
+    "expected": {
+      "value": 10000
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q070",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "How long does Northstar retain backup copies?",
+    "expected": {
+      "value": 30
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q071",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "application_log_retention_days",
+    "query": "How long does Northstar keep application logs?",
+    "expected": {
+      "value": 14
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q072",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "deleted_account_retention_days",
+    "query": "Retention for deleted-account data?",
+    "expected": {
+      "value": 7
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q073",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "Does Enterprise provide support around the clock in the EU?",
+    "expected": {
+      "support": "24/7 support",
+      "regions": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q074",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "professional_slack_and_support",
+    "query": "Can Professional use Slack and what support does it get?",
+    "expected": {
+      "slack_available": true,
+      "support": "24/5 support"
+    },
+    "expected_sources": [
+      "integrations.md",
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q075",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "What Enterprise support applies in European regions?",
+    "expected": {
+      "support": "24/7 support",
+      "regions": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q076",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "professional_slack_and_support",
+    "query": "Does Professional include Slack and 24/5 support?",
+    "expected": {
+      "slack_available": true,
+      "support": "24/5 support"
+    },
+    "expected_sources": [
+      "integrations.md",
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q077",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "Does Enterprise provide support around the clock in the EU?",
+    "expected": {
+      "support": "24/7 support",
+      "regions": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q078",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "professional_slack_and_support",
+    "query": "Can Professional use Slack and what support does it get?",
+    "expected": {
+      "slack_available": true,
+      "support": "24/5 support"
+    },
+    "expected_sources": [
+      "integrations.md",
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q079",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "What Enterprise support applies in European regions?",
+    "expected": {
+      "support": "24/7 support",
+      "regions": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q080",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "professional_slack_and_support",
+    "query": "Does Professional include Slack and 24/5 support?",
+    "expected": {
+      "slack_available": true,
+      "support": "24/5 support"
+    },
+    "expected_sources": [
+      "integrations.md",
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q081",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "Does Enterprise provide support around the clock in the EU?",
+    "expected": {
+      "support": "24/7 support",
+      "regions": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q082",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "professional_slack_and_support",
+    "query": "Can Professional use Slack and what support does it get?",
+    "expected": {
+      "slack_available": true,
+      "support": "24/5 support"
+    },
+    "expected_sources": [
+      "integrations.md",
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q083",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "What Enterprise support applies in European regions?",
+    "expected": {
+      "support": "24/7 support",
+      "regions": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q084",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "professional_slack_and_support",
+    "query": "Does Professional include Slack and 24/5 support?",
+    "expected": {
+      "slack_available": true,
+      "support": "24/5 support"
+    },
+    "expected_sources": [
+      "integrations.md",
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q085",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "Does Enterprise provide support around the clock in the EU?",
+    "expected": {
+      "support": "24/7 support",
+      "regions": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q086",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "professional_slack_and_support",
+    "query": "Can Professional use Slack and what support does it get?",
+    "expected": {
+      "slack_available": true,
+      "support": "24/5 support"
+    },
+    "expected_sources": [
+      "integrations.md",
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q087",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "What Enterprise support applies in European regions?",
+    "expected": {
+      "support": "24/7 support",
+      "regions": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q088",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "professional_slack_and_support",
+    "query": "Does Professional include Slack and 24/5 support?",
+    "expected": {
+      "slack_available": true,
+      "support": "24/5 support"
+    },
+    "expected_sources": [
+      "integrations.md",
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q089",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "regulated_financial_company_suitability",
+    "query": "Is Northstar suitable for a heavily regulated financial company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q090",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "plan_recommendation_for_company",
+    "query": "Which Northstar plan is the best fit for our company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q091",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "regulated_financial_company_suitability",
+    "query": "Is Northstar suitable for a heavily regulated financial company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q092",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "plan_recommendation_for_company",
+    "query": "Which Northstar plan is the best fit for our company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q093",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "regulated_financial_company_suitability",
+    "query": "Is Northstar suitable for a heavily regulated financial company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q094",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "plan_recommendation_for_company",
+    "query": "Which Northstar plan is the best fit for our company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q095",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "regulated_financial_company_suitability",
+    "query": "Is Northstar suitable for a heavily regulated financial company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q096",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "plan_recommendation_for_company",
+    "query": "Which Northstar plan is the best fit for our company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q097",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "regulated_financial_company_suitability",
+    "query": "Is Northstar suitable for a heavily regulated financial company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q098",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "plan_recommendation_for_company",
+    "query": "Which Northstar plan is the best fit for our company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q099",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "regulated_financial_company_suitability",
+    "query": "Is Northstar suitable for a heavily regulated financial company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q100",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "plan_recommendation_for_company",
+    "query": "Which Northstar plan is the best fit for our company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q101",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "How long are backups retained?",
+    "expected": {
+      "value": 45
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q102",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "What is the backup retention period?",
+    "expected": {
+      "value": 45
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q103",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "For how many days does Northstar keep backups?",
+    "expected": {
+      "value": 45
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q104",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "Backup retention in days?",
+    "expected": {
+      "value": 45
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q105",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "How long does Northstar retain backup copies?",
+    "expected": {
+      "value": 45
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q106",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "How long are backups retained?",
+    "expected": {
+      "value": 45
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q107",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "What is the Starter API rate limit?",
+    "expected": {
+      "value": 2500
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q108",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "How many API calls per hour does Starter allow?",
+    "expected": {
+      "value": 2500
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q109",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "Starter request limit?",
+    "expected": {
+      "value": 2500
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q110",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "Hourly API quota for Starter?",
+    "expected": {
+      "value": 2500
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q111",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "How many requests can Starter make each hour?",
+    "expected": {
+      "value": 2500
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q112",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "What is the Starter API rate limit?",
+    "expected": {
+      "value": 2500
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q113",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_support_level",
+    "query": "What support does Enterprise include?",
+    "expected": {
+      "value": "24/7 for P1 incidents; business hours for standard tickets"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q114",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_support_level",
+    "query": "Enterprise support level?",
+    "expected": {
+      "value": "24/7 for P1 incidents; business hours for standard tickets"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q115",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_support_level",
+    "query": "Does Enterprise have 24/7 support?",
+    "expected": {
+      "value": "24/7 for P1 incidents; business hours for standard tickets"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q116",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_support_level",
+    "query": "How is Enterprise supported?",
+    "expected": {
+      "value": "24/7 for P1 incidents; business hours for standard tickets"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q117",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_support_level",
+    "query": "Describe Enterprise support.",
+    "expected": {
+      "value": "24/7 for P1 incidents; business hours for standard tickets"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q118",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_support_level",
+    "query": "What support does Enterprise include?",
+    "expected": {
+      "value": "24/7 for P1 incidents; business hours for standard tickets"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q119",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "eu_regions",
+    "query": "Where is Northstar hosted in the EU?",
+    "expected": {
+      "value": [
+        "Frankfurt",
+        "Dublin"
+      ]
+    },
+    "expected_sources": [
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q120",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "eu_regions",
+    "query": "What EU regions does Northstar have?",
+    "expected": {
+      "value": [
+        "Frankfurt",
+        "Dublin"
+      ]
+    },
+    "expected_sources": [
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q121",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "eu_regions",
+    "query": "European data region?",
+    "expected": {
+      "value": [
+        "Frankfurt",
+        "Dublin"
+      ]
+    },
+    "expected_sources": [
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q122",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "eu_regions",
+    "query": "Which European regions are available?",
+    "expected": {
+      "value": [
+        "Frankfurt",
+        "Dublin"
+      ]
+    },
+    "expected_sources": [
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q123",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "eu_regions",
+    "query": "EU hosting locations?",
+    "expected": {
+      "value": [
+        "Frankfurt",
+        "Dublin"
+      ]
+    },
+    "expected_sources": [
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q124",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "eu_regions",
+    "query": "Where is Northstar hosted in the EU?",
+    "expected": {
+      "value": [
+        "Frankfurt",
+        "Dublin"
+      ]
+    },
+    "expected_sources": [
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q125",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "annual_discount_percentage",
+    "query": "What is the annual billing discount?",
+    "expected": {
+      "value": 20
+    },
+    "expected_sources": [
+      "billing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q126",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "annual_discount_percentage",
+    "query": "How much do I save with annual billing?",
+    "expected": {
+      "value": 20
+    },
+    "expected_sources": [
+      "billing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q127",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "annual_discount_percentage",
+    "query": "Annual discount percentage?",
+    "expected": {
+      "value": 20
+    },
+    "expected_sources": [
+      "billing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q128",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "annual_discount_percentage",
+    "query": "What discount is offered for yearly billing?",
+    "expected": {
+      "value": 20
+    },
+    "expected_sources": [
+      "billing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q129",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "annual_discount_percentage",
+    "query": "Northstar annual billing savings?",
+    "expected": {
+      "value": 20
+    },
+    "expected_sources": [
+      "billing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q130",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "annual_discount_percentage",
+    "query": "What is the annual billing discount?",
+    "expected": {
+      "value": 20
+    },
+    "expected_sources": [
+      "billing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q131",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_price_monthly",
+    "query": "What does Starter cost per month?",
+    "expected": {
+      "value": 29
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q132",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_price_monthly",
+    "query": "Monthly price for Starter?",
+    "expected": {
+      "value": 29
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q133",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_price_monthly",
+    "query": "What does Professional cost monthly?",
+    "expected": {
+      "value": 99
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q134",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "professional_price_monthly",
+    "query": "Professional monthly price?",
+    "expected": {
+      "value": 99
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q135",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "application_log_retention_days",
+    "query": "How long are production application logs retained?",
+    "expected": {
+      "value": 14
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q136",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "application_log_retention_days",
+    "query": "Application log retention period?",
+    "expected": {
+      "value": 14
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q137",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_audit_log_retention_days",
+    "query": "How long are Enterprise audit logs retained?",
+    "expected": {
+      "value": 365
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q138",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_audit_log_retention_days",
+    "query": "Enterprise audit log retention?",
+    "expected": {
+      "value": 365
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q139",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "cancellation_effective_time",
+    "query": "When does a cancellation take effect?",
+    "expected": {
+      "value": "end of the current paid billing period"
+    },
+    "expected_sources": [
+      "cancellations.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q140",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "cancellation_effective_time",
+    "query": "If I cancel, when does service end?",
+    "expected": {
+      "value": "end of the current paid billing period"
+    },
+    "expected_sources": [
+      "cancellations.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q141",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "What Enterprise support applies in the EU now?",
+    "expected": {
+      "support": "24/7 for P1 incidents; business hours for standard tickets",
+      "regions": [
+        "Frankfurt",
+        "Dublin"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q142",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "What Enterprise support applies in the EU now?",
+    "expected": {
+      "support": "24/7 for P1 incidents; business hours for standard tickets",
+      "regions": [
+        "Frankfurt",
+        "Dublin"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q143",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "What Enterprise support applies in the EU now?",
+    "expected": {
+      "support": "24/7 for P1 incidents; business hours for standard tickets",
+      "regions": [
+        "Frankfurt",
+        "Dublin"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q144",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "What Enterprise support applies in the EU now?",
+    "expected": {
+      "support": "24/7 for P1 incidents; business hours for standard tickets",
+      "regions": [
+        "Frankfurt",
+        "Dublin"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q145",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "What Enterprise support applies in the EU now?",
+    "expected": {
+      "support": "24/7 for P1 incidents; business hours for standard tickets",
+      "regions": [
+        "Frankfurt",
+        "Dublin"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "q146",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reasoning_required",
+    "canonical_intent": "regulated_financial_company_suitability",
+    "query": "Given the current documentation, is Northstar suitable for a heavily regulated financial company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q147",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reasoning_required",
+    "canonical_intent": "regulated_financial_company_suitability",
+    "query": "Given the current documentation, is Northstar suitable for a heavily regulated financial company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q148",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reasoning_required",
+    "canonical_intent": "regulated_financial_company_suitability",
+    "query": "Given the current documentation, is Northstar suitable for a heavily regulated financial company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q149",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reasoning_required",
+    "canonical_intent": "regulated_financial_company_suitability",
+    "query": "Given the current documentation, is Northstar suitable for a heavily regulated financial company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "q150",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reasoning_required",
+    "canonical_intent": "regulated_financial_company_suitability",
+    "query": "Given the current documentation, is Northstar suitable for a heavily regulated financial company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  }
+]

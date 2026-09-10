@@ -1,0 +1,35 @@
+{
+  "starter_price_monthly": 29,
+  "professional_price_monthly": 99,
+  "annual_discount_percentage": 20,
+  "starter_api_limit_hourly": 2500,
+  "professional_api_limit_hourly": 10000,
+  "enterprise_api_limit_hourly": 100000,
+  "backup_retention_days": 45,
+  "application_log_retention_days": 14,
+  "deleted_account_retention_days": 7,
+  "enterprise_audit_log_retention_days": 365,
+  "starter_support_level": "business-day email support",
+  "professional_support_level": "24/5 support",
+  "enterprise_support_level": "24/7 for P1 incidents; business hours for standard tickets",
+  "eu_regions": [
+    "Frankfurt",
+    "Dublin"
+  ],
+  "us_region": "Virginia",
+  "apac_region": "Singapore",
+  "cancellation_effective_time": "end of the current paid billing period",
+  "slack_integration_plans": [
+    "Professional",
+    "Enterprise"
+  ],
+  "sso_saml_plan": "Enterprise",
+  "encryption_at_rest": "AES-256",
+  "tls": "TLS 1.3 where supported",
+  "salesforce_integration_plan": "Enterprise",
+  "webhooks_plans": [
+    "Starter",
+    "Professional",
+    "Enterprise"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "naive_cache_incorrect_stale_reuse": 37,
+  "smart_incorrect_stale_reuse": 0,
+  "smart_invalidations": 6
+}

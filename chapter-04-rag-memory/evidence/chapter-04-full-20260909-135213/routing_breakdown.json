@@ -1,0 +1,14 @@
+{
+  "baseline": {
+    "RAG_REASONING": 150
+  },
+  "smart": {
+    "REASONING": 35,
+    "MEMORY": 109,
+    "RELEARNING": 6
+  },
+  "naive_cache": {
+    "RAG_REASONING": 35,
+    "CACHE": 115
+  }
+}

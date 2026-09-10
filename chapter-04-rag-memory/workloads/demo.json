@@ -1,0 +1,251 @@
+[
+  {
+    "query_id": "d001",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "How long are backups retained?",
+    "expected": {
+      "value": 30
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d002",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "What is the backup retention period?",
+    "expected": {
+      "value": 30
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d003",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "For how many days does Northstar keep backups?",
+    "expected": {
+      "value": 30
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d004",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "What is the Starter API rate limit?",
+    "expected": {
+      "value": 1000
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d005",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "How many API calls per hour does Starter allow?",
+    "expected": {
+      "value": 1000
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d006",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "enterprise_support_level",
+    "query": "What support does Enterprise include?",
+    "expected": {
+      "value": "24/7 support"
+    },
+    "expected_sources": [
+      "support.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d007",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "Does Enterprise provide 24/7 support in the EU?",
+    "expected": {
+      "support": "24/7 support",
+      "regions": [
+        "Frankfurt"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d008",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reasoning_required",
+    "canonical_intent": "regulated_financial_company_suitability",
+    "query": "Is Northstar suitable for a heavily regulated financial company?",
+    "expected": {
+      "decision": "reasoning_required"
+    },
+    "expected_sources": [
+      "security.md"
+    ],
+    "deterministic_memory_reuse_allowed": false,
+    "llm_required_by_policy": true
+  },
+  {
+    "query_id": "d009",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_price_monthly",
+    "query": "What does Starter cost per month?",
+    "expected": {
+      "value": 29
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d010",
+    "phase": "v1",
+    "source_version": "v1",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_price_monthly",
+    "query": "Monthly price for Starter?",
+    "expected": {
+      "value": 29
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d011",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "Backup retention in days?",
+    "expected": {
+      "value": 45
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d012",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "backup_retention_days",
+    "query": "How long does Northstar retain backup copies?",
+    "expected": {
+      "value": 45
+    },
+    "expected_sources": [
+      "data-retention.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d013",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_api_limit_hourly",
+    "query": "Starter request limit?",
+    "expected": {
+      "value": 2500
+    },
+    "expected_sources": [
+      "api-limits.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d014",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "reusable_fact",
+    "canonical_intent": "starter_price_monthly",
+    "query": "How much is the Starter plan?",
+    "expected": {
+      "value": 29
+    },
+    "expected_sources": [
+      "pricing.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  },
+  {
+    "query_id": "d015",
+    "phase": "v2",
+    "source_version": "v2",
+    "class": "compositional",
+    "canonical_intent": "enterprise_support_in_eu",
+    "query": "What Enterprise support applies in the EU now?",
+    "expected": {
+      "support": "24/7 for P1 incidents; business hours for standard tickets",
+      "regions": [
+        "Frankfurt",
+        "Dublin"
+      ]
+    },
+    "expected_sources": [
+      "support.md",
+      "regions.md"
+    ],
+    "deterministic_memory_reuse_allowed": true,
+    "llm_required_by_policy": false
+  }
+]

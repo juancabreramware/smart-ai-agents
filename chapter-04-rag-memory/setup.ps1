@@ -1,0 +1,1 @@
+python -m venv .venv\n.\.venv\Scripts\python.exe -m pip install --upgrade pip\n.\.venv\Scripts\python.exe -m pip install -r requirements.txt\nCopy-Item .env.example .env -ErrorAction SilentlyContinue\nWrite-Host "Setup complete. Edit .env, then run pytest -q."\n

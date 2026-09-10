@@ -1,0 +1,113 @@
+{
+  "baseline": {
+    "executions": 150,
+    "successful": 141,
+    "correctness": 0.94,
+    "routing_policy_correctness": 1.0,
+    "llm_calls": 150,
+    "input_tokens": 24453,
+    "cached_input_tokens": 0,
+    "output_tokens": 5475,
+    "embedding_calls": 150,
+    "embedding_tokens": 1184,
+    "total_cost_usd": 0.20733568,
+    "median_latency_ms": 2322.604350047186,
+    "p95_latency_ms": 4387.731499969959,
+    "memory_reuse_rate": 0.0,
+    "llm_avoidance_rate": 0.0,
+    "fallback_rate": 0.0,
+    "memory_lookups": 0,
+    "memory_hits": 0,
+    "memory_misses": 0,
+    "document_retrievals": 150,
+    "memory_invalidations": 0,
+    "memory_promotions": 0,
+    "incorrect_stale_reuse": 0,
+    "paths": {
+      "RAG_REASONING": 150
+    },
+    "events": {
+      "RETRIEVE": 150,
+      "REASON": 150,
+      "VALIDATE": 150
+    }
+  },
+  "smart": {
+    "executions": 150,
+    "successful": 150,
+    "correctness": 1.0,
+    "routing_policy_correctness": 1.0,
+    "llm_calls": 41,
+    "input_tokens": 7774,
+    "cached_input_tokens": 0,
+    "output_tokens": 1821,
+    "embedding_calls": 150,
+    "embedding_tokens": 1184,
+    "total_cost_usd": 0.06753968,
+    "median_latency_ms": 358.1061998847872,
+    "p95_latency_ms": 2618.8896000385284,
+    "memory_reuse_rate": 0.7266666666666667,
+    "llm_avoidance_rate": 0.7266666666666667,
+    "fallback_rate": 0.04,
+    "memory_lookups": 150,
+    "memory_hits": 115,
+    "memory_misses": 18,
+    "document_retrievals": 41,
+    "memory_invalidations": 6,
+    "memory_promotions": 24,
+    "incorrect_stale_reuse": 0,
+    "paths": {
+      "REASONING": 35,
+      "MEMORY": 109,
+      "RELEARNING": 6
+    },
+    "events": {
+      "MEMORY_LOOKUP": 150,
+      "MEMORY_MISS": 18,
+      "ACQUIRE": 18,
+      "VALIDATED": 24,
+      "MEMORY_PROMOTED": 24,
+      "MEMORY_VALID": 109,
+      "DETERMINISTIC_REUSE": 109,
+      "REASONING_REQUIRED": 17,
+      "SOURCE_CHANGED": 6,
+      "MEMORY_INVALIDATED": 6
+    }
+  },
+  "naive_cache": {
+    "executions": 150,
+    "successful": 109,
+    "correctness": 0.7266666666666667,
+    "routing_policy_correctness": 1.0,
+    "llm_calls": 35,
+    "input_tokens": 6847,
+    "cached_input_tokens": 0,
+    "output_tokens": 1582,
+    "embedding_calls": 150,
+    "embedding_tokens": 1184,
+    "total_cost_usd": 0.05903508,
+    "median_latency_ms": 359.4423000467941,
+    "p95_latency_ms": 2749.759600032121,
+    "memory_reuse_rate": 0.0,
+    "llm_avoidance_rate": 0.7666666666666666,
+    "fallback_rate": 0.0,
+    "memory_lookups": 0,
+    "memory_hits": 0,
+    "memory_misses": 0,
+    "document_retrievals": 35,
+    "memory_invalidations": 0,
+    "memory_promotions": 0,
+    "incorrect_stale_reuse": 37,
+    "paths": {
+      "RAG_REASONING": 35,
+      "CACHE": 115
+    },
+    "events": {
+      "CACHE_MISS": 35,
+      "RETRIEVE": 35,
+      "REASON": 35,
+      "VALIDATE": 35,
+      "SEMANTIC_CACHE_HIT": 115
+    }
+  }
+}

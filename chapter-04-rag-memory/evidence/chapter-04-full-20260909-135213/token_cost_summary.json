@@ -1,0 +1,29 @@
+{
+  "baseline": {
+    "llm_calls": 150,
+    "input_tokens": 24453,
+    "cached_input_tokens": 0,
+    "output_tokens": 5475,
+    "embedding_calls": 150,
+    "embedding_tokens": 1184,
+    "total_cost_usd": 0.20733568
+  },
+  "smart": {
+    "llm_calls": 41,
+    "input_tokens": 7774,
+    "cached_input_tokens": 0,
+    "output_tokens": 1821,
+    "embedding_calls": 150,
+    "embedding_tokens": 1184,
+    "total_cost_usd": 0.06753968
+  },
+  "naive_cache": {
+    "llm_calls": 35,
+    "input_tokens": 6847,
+    "cached_input_tokens": 0,
+    "output_tokens": 1582,
+    "embedding_calls": 150,
+    "embedding_tokens": 1184,
+    "total_cost_usd": 0.05903508
+  }
+}

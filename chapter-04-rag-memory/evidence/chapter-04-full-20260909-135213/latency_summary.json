@@ -1,0 +1,14 @@
+{
+  "baseline": {
+    "median_latency_ms": 2322.604350047186,
+    "p95_latency_ms": 4387.731499969959
+  },
+  "smart": {
+    "median_latency_ms": 358.1061998847872,
+    "p95_latency_ms": 2618.8896000385284
+  },
+  "naive_cache": {
+    "median_latency_ms": 359.4423000467941,
+    "p95_latency_ms": 2749.759600032121
+  }
+}

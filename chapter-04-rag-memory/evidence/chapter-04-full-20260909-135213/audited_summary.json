@@ -1,0 +1,29 @@
+{
+  "baseline": {
+    "executions": 150,
+    "raw_successful": 141,
+    "raw_correctness": 0.94,
+    "audited_successful": 150,
+    "audited_correctness": 1.0,
+    "evaluation_changes": 9,
+    "audited_incorrect_stale_reuse": 0
+  },
+  "naive_cache": {
+    "executions": 150,
+    "raw_successful": 109,
+    "raw_correctness": 0.7266666666666667,
+    "audited_successful": 115,
+    "audited_correctness": 0.7666666666666667,
+    "evaluation_changes": 6,
+    "audited_incorrect_stale_reuse": 35
+  },
+  "smart": {
+    "executions": 150,
+    "raw_successful": 150,
+    "raw_correctness": 1.0,
+    "audited_successful": 150,
+    "audited_correctness": 1.0,
+    "evaluation_changes": 0,
+    "audited_incorrect_stale_reuse": 0
+  }
+}

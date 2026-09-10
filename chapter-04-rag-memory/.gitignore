@@ -1,0 +1,14 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+results/*
+!results/.gitkeep
+smart_agent/memory_store.json
+naive_cache/cache_store.json
+*.log
+.DS_Store
+.vscode/
+.idea/

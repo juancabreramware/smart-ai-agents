@@ -1,0 +1,15 @@
+{
+  "mode": "full",
+  "provider": "openai",
+  "embeddings": "openai",
+  "model": "gpt-5.6",
+  "embedding_model": "text-embedding-3-small",
+  "python": "3.13.1",
+  "workload_count": 150,
+  "pricing": {
+    "input_per_m": 4.0,
+    "cached_input_per_m": 0.4,
+    "output_per_m": 20.0,
+    "embedding_per_m": 0.02
+  }
+}
