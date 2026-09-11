@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "integration_contract_version": 1,
+  "rules": {
+    "engineering_mfa_before_repo": false,
+    "finance_awareness_before_access": false
+  },
+  "changed_dependencies": [],
+  "workflow_requirements": {
+    "engineering_employee_onboarding": [
+      "create_identity",
+      "create_mailbox",
+      "add_group_member(Engineering)",
+      "create_source_control_user",
+      "grant_repository_access(engineering-main)",
+      "create_project_user",
+      "add_project_member(ENG)",
+      "send_notification(engineering_onboarding)"
+    ],
+    "engineering_contractor_onboarding": [
+      "same as engineering employee",
+      "set_access_expiration before notification"
+    ],
+    "finance_employee_onboarding": [
+      "create_identity",
+      "create_mailbox",
+      "add_group_member(Finance)",
+      "create_project_user",
+      "add_project_member(FIN)",
+      "send_notification(finance_onboarding)"
+    ],
+    "sales_employee_onboarding": [
+      "create_identity",
+      "create_mailbox",
+      "add_group_member(Sales)",
+      "create_crm_user",
+      "send_notification(sales_onboarding)"
+    ],
+    "operations_employee_onboarding": [
+      "create_identity",
+      "create_mailbox",
+      "add_group_member(Operations)",
+      "create_project_user",
+      "add_project_member(OPS)",
+      "send_notification(operations_onboarding)"
+    ],
+    "standard_employee_offboarding": [
+      "revoke_repository_access",
+      "disable_source_control_user",
+      "remove_project_member",
+      "disable_project_user",
+      "disable_crm_user",
+      "remove_group_member",
+      "send_notification(offboarding_confirmation)",
+      "disable_mailbox",
+      "disable_identity"
+    ],
+    "immediate_security_offboarding": [
+      "same ordered actions as standard_employee_offboarding"
+    ],
+    "contractor_expiration": [
+      "same ordered actions as standard_employee_offboarding"
+    ],
+    "department_transfer_into_engineering": [
+      "add_group_member(Engineering)",
+      "create_source_control_user",
+      "grant_repository_access(engineering-main)",
+      "create_project_user",
+      "add_project_member(ENG)"
+    ],
+    "department_transfer_out_of_engineering": [
+      "revoke_repository_access(engineering-main)",
+      "disable_source_control_user",
+      "remove_project_member(ENG)",
+      "remove_group_member(Engineering)",
+      "add_group_member(new_department)"
+    ],
+    "repository_access_change": [
+      "grant_repository_access(request.repository)"
+    ],
+    "project_access_change": [
+      "create_project_user",
+      "add_project_member(request.project)"
+    ],
+    "temporary_elevated_access": [
+      "grant_temporary_elevated_access",
+      "send_notification(temporary_access)"
+    ],
+    "return_from_leave_reactivation": [
+      "reactivate_identity",
+      "create_mailbox",
+      "send_notification(return_from_leave)"
+    ],
+    "new_manager_access_adjustment": [
+      "create_project_user",
+      "add_project_member(request.project)"
+    ],
+    "employee_name_email_change": [
+      "rename_identity",
+      "change_email(request.email)",
+      "send_notification(identity_changed)"
+    ]
+  }
+}
