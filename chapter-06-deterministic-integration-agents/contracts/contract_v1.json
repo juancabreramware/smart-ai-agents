@@ -1,0 +1,166 @@
+{
+  "contract_version": 1,
+  "changed_dependencies": [],
+  "apis": {
+    "crm": {
+      "lookup_customer": {
+        "required": [
+          "customer_id"
+        ],
+        "response": [
+          "customer_id",
+          "name",
+          "status",
+          "tags"
+        ],
+        "scope": "crm.read"
+      },
+      "update_customer_tag": {
+        "required": [
+          "customer_id",
+          "tag"
+        ],
+        "response": [
+          "customer_id",
+          "tags"
+        ],
+        "scope": "crm.write"
+      }
+    },
+    "support": {
+      "create_ticket": {
+        "required": [
+          "customer_id",
+          "subject",
+          "priority"
+        ],
+        "response": [
+          "ticket_id",
+          "status"
+        ],
+        "scope": "support.write"
+      },
+      "assign_ticket": {
+        "required": [
+          "ticket_id",
+          "queue"
+        ],
+        "response": [
+          "ticket_id",
+          "queue"
+        ],
+        "scope": "support.write"
+      },
+      "add_comment": {
+        "required": [
+          "ticket_id",
+          "comment"
+        ],
+        "response": [
+          "ticket_id",
+          "comment_count"
+        ],
+        "scope": "support.write"
+      }
+    },
+    "billing": {
+      "get_invoice": {
+        "required": [
+          "invoice_id"
+        ],
+        "response": [
+          "invoice_id",
+          "customer_id",
+          "amount_cents",
+          "status"
+        ],
+        "scope": "billing.read"
+      },
+      "apply_credit": {
+        "required": [
+          "customer_id",
+          "amount",
+          "reason"
+        ],
+        "response": [
+          "credit_id",
+          "status"
+        ],
+        "scope": "billing.write"
+      },
+      "get_payment_status": {
+        "required": [
+          "invoice_id"
+        ],
+        "response": [
+          "invoice_id",
+          "status"
+        ],
+        "scope": "billing.read"
+      }
+    },
+    "messaging": {
+      "send_template": {
+        "required": [
+          "recipient",
+          "template_id",
+          "variables"
+        ],
+        "response": [
+          "message_id",
+          "status"
+        ],
+        "scope": "messaging.send"
+      }
+    },
+    "inventory": {
+      "check_sku": {
+        "required": [
+          "sku",
+          "warehouse_id"
+        ],
+        "response": [
+          "sku",
+          "warehouse_id",
+          "available"
+        ],
+        "scope": "inventory.read"
+      },
+      "reserve_sku": {
+        "required": [
+          "sku",
+          "warehouse_id",
+          "quantity"
+        ],
+        "response": [
+          "reservation_id",
+          "status"
+        ],
+        "scope": "inventory.write"
+      },
+      "release_reservation": {
+        "required": [
+          "reservation_id"
+        ],
+        "response": [
+          "reservation_id",
+          "status"
+        ],
+        "scope": "inventory.write"
+      }
+    },
+    "identity": {
+      "lookup_service_user": {
+        "required": [
+          "user_id"
+        ],
+        "response": [
+          "user_id",
+          "active",
+          "scopes"
+        ],
+        "scope": "identity.read"
+      }
+    }
+  }
+}

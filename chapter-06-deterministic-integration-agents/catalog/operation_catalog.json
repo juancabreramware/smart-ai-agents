@@ -1,0 +1,150 @@
+{
+  "crm_lookup_customer": {
+    "description": "Retrieve one customer by customer_id.",
+    "v1_steps": [
+      "crm.lookup_customer(customer_id <- customer_id)"
+    ],
+    "v2_steps": [
+      "crm.lookup_customer(customer_id <- customer_id)"
+    ]
+  },
+  "crm_update_customer_tag": {
+    "description": "Add a customer tag.",
+    "v1_steps": [
+      "crm.update_customer_tag(customer_id <- customer_id, tag <- tag)"
+    ],
+    "v2_steps": [
+      "crm.update_customer_tag(customer_id <- customer_id, tag <- tag)"
+    ]
+  },
+  "support_create_ticket": {
+    "description": "Create a support ticket.",
+    "v1_steps": [
+      "support.create_ticket(customer_id <- customer_id, subject <- subject, priority <- priority)"
+    ],
+    "v2_steps": [
+      "support.create_ticket(customer_id <- customer_id, subject <- subject, priority <- priority, category <- category)"
+    ]
+  },
+  "support_assign_ticket": {
+    "description": "Assign a ticket to a queue.",
+    "v1_steps": [
+      "support.assign_ticket(ticket_id <- ticket_id, queue <- queue)"
+    ],
+    "v2_steps": [
+      "support.assign_ticket(ticket_id <- ticket_id, queue <- queue)"
+    ]
+  },
+  "support_add_comment": {
+    "description": "Add an approved comment to a ticket.",
+    "v1_steps": [
+      "support.add_comment(ticket_id <- ticket_id, comment <- comment)"
+    ],
+    "v2_steps": [
+      "support.add_comment(ticket_id <- ticket_id, comment <- comment)"
+    ]
+  },
+  "billing_get_invoice": {
+    "description": "Retrieve an invoice.",
+    "v1_steps": [
+      "billing.get_invoice(invoice_id <- invoice_id)"
+    ],
+    "v2_steps": [
+      "billing.get_invoice(invoice_id <- invoice_id)"
+    ]
+  },
+  "billing_apply_credit": {
+    "description": "Apply an approved service credit.",
+    "v1_steps": [
+      "billing.apply_credit(customer_id <- customer_id, amount <- amount, reason <- reason)"
+    ],
+    "v2_steps": [
+      "billing.apply_credit(customer_id <- customer_id, amount_cents <- amount_cents, reason <- reason, approval_code <- approval_code)"
+    ]
+  },
+  "billing_get_payment_status": {
+    "description": "Retrieve invoice payment status.",
+    "v1_steps": [
+      "billing.get_payment_status(invoice_id <- invoice_id)"
+    ],
+    "v2_steps": [
+      "billing.get_payment_status(invoice_id <- invoice_id)"
+    ]
+  },
+  "messaging_send_template": {
+    "description": "Send an approved message template.",
+    "v1_steps": [
+      "messaging.send_template(recipient <- recipient, template_id <- template_id, variables <- variables)"
+    ],
+    "v2_steps": [
+      "messaging.send_template(recipient <- recipient, template_id <- template_id, variables <- variables)"
+    ]
+  },
+  "inventory_check_sku": {
+    "description": "Check availability of a SKU at a warehouse.",
+    "v1_steps": [
+      "inventory.check_sku(sku <- sku, warehouse_id <- warehouse_id)"
+    ],
+    "v2_steps": [
+      "inventory.check_sku(sku <- sku, warehouse_id <- warehouse_id)"
+    ]
+  },
+  "inventory_reserve_sku": {
+    "description": "Reserve inventory.",
+    "v1_steps": [
+      "inventory.reserve_sku(sku <- sku, warehouse_id <- warehouse_id, quantity <- quantity)"
+    ],
+    "v2_steps": [
+      "inventory.reserve_sku(sku <- sku, location_id <- location_id, quantity <- quantity, idempotency_key <- idempotency_key)"
+    ]
+  },
+  "inventory_release_reservation": {
+    "description": "Release an inventory reservation.",
+    "v1_steps": [
+      "inventory.release_reservation(reservation_id <- reservation_id)"
+    ],
+    "v2_steps": [
+      "inventory.release_reservation(reservation_id <- reservation_id)"
+    ]
+  },
+  "identity_lookup_service_user": {
+    "description": "Look up an internal service user.",
+    "v1_steps": [
+      "identity.lookup_service_user(user_id <- user_id)"
+    ],
+    "v2_steps": [
+      "identity.lookup_service_user(user_id <- user_id)"
+    ]
+  },
+  "customer_issue_resolution": {
+    "description": "Gather customer and payment facts, then create a support ticket.",
+    "v1_steps": [
+      "crm.lookup_customer(customer_id <- customer_id)",
+      "billing.get_payment_status(invoice_id <- invoice_id)",
+      "support.create_ticket(customer_id <- customer_id, subject <- subject, priority <- priority)"
+    ],
+    "v2_steps": [
+      "crm.lookup_customer(customer_id <- customer_id)",
+      "billing.get_payment_status(invoice_id <- invoice_id)",
+      "support.create_ticket(customer_id <- customer_id, subject <- subject, priority <- priority, category <- category)"
+    ]
+  },
+  "exception_credit_request": {
+    "description": "Reason about and apply an exceptional credit; this family is intentionally not promoted.",
+    "v1_steps": [
+      "billing.apply_credit(customer_id <- customer_id, amount <- amount, reason <- reason)"
+    ],
+    "v2_steps": [
+      "billing.apply_credit(customer_id <- customer_id, amount_cents <- amount_cents, reason <- reason, approval_code <- approval_code)"
+    ]
+  },
+  "ambiguous_customer_action": {
+    "description": "The action is intentionally ambiguous; request clarification rather than calling a business API.",
+    "v1_steps": [
+      "agent.clarify_request(clarification <- clarification)"
+    ],
+    "v2_steps": [
+      "agent.clarify_request(clarification <- clarification)"
+    ]
+  }
+}
