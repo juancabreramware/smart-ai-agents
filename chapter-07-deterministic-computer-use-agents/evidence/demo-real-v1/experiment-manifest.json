@@ -1,0 +1,26 @@
+{
+  "architectures": [
+    "baseline",
+    "smart",
+    "naive"
+  ],
+  "canonical": false,
+  "chapter": 7,
+  "executor": "playwright",
+  "experiment_specification": "v1.0",
+  "model": "gpt-5.6-sol",
+  "note": "Mock/local outputs are validation evidence only. Set canonical only after the real benchmark is reviewed and frozen.",
+  "planner": "openai",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pricing": {
+    "cached_input_per_million": 0.4,
+    "input_per_million": 4.0,
+    "model": "gpt-5.6-sol",
+    "output_per_million": 20.0,
+    "source_note": "Pinned benchmark pricing; verify official pricing immediately before canonical run."
+  },
+  "python": "3.13.1",
+  "request_count_per_architecture": 15,
+  "schema_version": 1,
+  "workload_sha256": "6306320c9217a393b9468440986e571b716e1e0ffb39d0402b997c87edde8533"
+}

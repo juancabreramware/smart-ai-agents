@@ -1,0 +1,597 @@
+[
+  {
+    "capability_id": "orders_lookup_status_v1",
+    "capability_version": 1,
+    "contract_fingerprint": "ebde5bb8d0ece942c55eb1cdb04ff1101bd15b27def07515bd2b08c25aef9603",
+    "failure_count": 0,
+    "operation_family": "orders.lookup_status",
+    "plan": {
+      "actions": [
+        {
+          "key": null,
+          "kind": "goto",
+          "target": "/orders/status",
+          "value": null
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='order-id']",
+          "value": "{{order_id}}"
+        },
+        {
+          "key": null,
+          "kind": "click",
+          "target": "[data-testid='order-status-submit']",
+          "value": null
+        },
+        {
+          "key": "order_status",
+          "kind": "extract",
+          "target": "[data-testid='order-status-result']",
+          "value": null
+        }
+      ],
+      "operation_family": "orders.lookup_status",
+      "postcondition": "order_status_matches_authoritative_state",
+      "required_args": [
+        "order_id"
+      ],
+      "reusable": true,
+      "start_path": "/orders/status"
+    },
+    "provenance": {
+      "created_by_request": "CH7-001",
+      "route": "INITIAL_ACQUISITION"
+    },
+    "reuse_count": 25,
+    "superseded_by": null,
+    "ui_contract_version": "v1",
+    "validation_state": "VALIDATED"
+  },
+  {
+    "capability_id": "shipping_update_instructions_v1",
+    "capability_version": 1,
+    "contract_fingerprint": "2d893c83cdeeeb96c17a4012405cebceacc711b339224f0b07779daa0d91f616",
+    "failure_count": 1,
+    "operation_family": "shipping.update_instructions",
+    "plan": {
+      "actions": [
+        {
+          "key": null,
+          "kind": "goto",
+          "target": "/shipping/update",
+          "value": null
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='shipping-order-id']",
+          "value": "{{order_id}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='delivery-window']",
+          "value": "{{delivery_window}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='shipping-instructions']",
+          "value": "{{instructions}}"
+        },
+        {
+          "key": null,
+          "kind": "click",
+          "target": "[data-testid='shipping-submit']",
+          "value": null
+        }
+      ],
+      "operation_family": "shipping.update_instructions",
+      "postcondition": "shipping_instruction_persisted",
+      "required_args": [
+        "order_id",
+        "delivery_window",
+        "instructions"
+      ],
+      "reusable": true,
+      "start_path": "/shipping/update"
+    },
+    "provenance": {
+      "created_by_request": "CH7-002",
+      "invalidations": [
+        "ui_contract_version,contract_fingerprint,route"
+      ],
+      "route": "INITIAL_ACQUISITION"
+    },
+    "reuse_count": 11,
+    "superseded_by": "shipping_update_instructions_v2",
+    "ui_contract_version": "v1",
+    "validation_state": "INVALIDATED"
+  },
+  {
+    "capability_id": "shipping_update_instructions_v2",
+    "capability_version": 2,
+    "contract_fingerprint": "567f0886e493707578f0ece144f488850e50844f42a7fe4ac2f38d99d0f48384",
+    "failure_count": 0,
+    "operation_family": "shipping.update_instructions",
+    "plan": {
+      "actions": [
+        {
+          "key": null,
+          "kind": "goto",
+          "target": "/shipping/details",
+          "value": null
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='shipment-order-id']",
+          "value": "{{order_id}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='shipment-window']",
+          "value": "{{delivery_window}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='shipment-notes']",
+          "value": "{{instructions}}"
+        },
+        {
+          "key": null,
+          "kind": "click",
+          "target": "[data-testid='shipment-save']",
+          "value": null
+        }
+      ],
+      "operation_family": "shipping.update_instructions",
+      "postcondition": "shipping_instruction_persisted",
+      "required_args": [
+        "order_id",
+        "delivery_window",
+        "instructions"
+      ],
+      "reusable": true,
+      "start_path": "/shipping/details"
+    },
+    "provenance": {
+      "created_by_request": "CH7-105",
+      "route": "RELEARNING"
+    },
+    "reuse_count": 7,
+    "superseded_by": null,
+    "ui_contract_version": "v2",
+    "validation_state": "VALIDATED"
+  },
+  {
+    "capability_id": "billing_apply_credit_v1",
+    "capability_version": 1,
+    "contract_fingerprint": "dbff91ff9174cdf8abfe8fdf7fe1dd311cedc8e3ca047020fa66259b76d49f0e",
+    "failure_count": 1,
+    "operation_family": "billing.apply_credit",
+    "plan": {
+      "actions": [
+        {
+          "key": null,
+          "kind": "goto",
+          "target": "/billing/credit",
+          "value": null
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='billing-customer-id']",
+          "value": "{{customer_id}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='billing-amount']",
+          "value": "{{amount}}"
+        },
+        {
+          "key": null,
+          "kind": "click",
+          "target": "[data-testid='billing-submit']",
+          "value": null
+        }
+      ],
+      "operation_family": "billing.apply_credit",
+      "postcondition": "credit_recorded",
+      "required_args": [
+        "customer_id",
+        "amount"
+      ],
+      "reusable": true,
+      "start_path": "/billing/credit"
+    },
+    "provenance": {
+      "created_by_request": "CH7-003",
+      "invalidations": [
+        "ui_contract_version,contract_fingerprint"
+      ],
+      "route": "INITIAL_ACQUISITION"
+    },
+    "reuse_count": 11,
+    "superseded_by": "billing_apply_credit_v2",
+    "ui_contract_version": "v1",
+    "validation_state": "INVALIDATED"
+  },
+  {
+    "capability_id": "billing_apply_credit_v2",
+    "capability_version": 2,
+    "contract_fingerprint": "cc432e7dafdee25258de9deea99659dd853dfa96affb106d4a6529b4fe5fa35b",
+    "failure_count": 0,
+    "operation_family": "billing.apply_credit",
+    "plan": {
+      "actions": [
+        {
+          "key": null,
+          "kind": "goto",
+          "target": "/billing/credit",
+          "value": null
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='billing-customer-id']",
+          "value": "{{customer_id}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='billing-amount-cents']",
+          "value": "{{amount_cents}}"
+        },
+        {
+          "key": null,
+          "kind": "select",
+          "target": "[data-testid='billing-reason-code']",
+          "value": "{{reason_code}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='billing-approval-code']",
+          "value": "{{approval_code}}"
+        },
+        {
+          "key": null,
+          "kind": "click",
+          "target": "[data-testid='billing-submit-v2']",
+          "value": null
+        }
+      ],
+      "operation_family": "billing.apply_credit",
+      "postcondition": "credit_recorded",
+      "required_args": [
+        "customer_id",
+        "amount",
+        "reason_code"
+      ],
+      "reusable": true,
+      "start_path": "/billing/credit"
+    },
+    "provenance": {
+      "created_by_request": "CH7-113",
+      "route": "RELEARNING"
+    },
+    "reuse_count": 7,
+    "superseded_by": null,
+    "ui_contract_version": "v2",
+    "validation_state": "VALIDATED"
+  },
+  {
+    "capability_id": "returns_create_authorization_v1",
+    "capability_version": 1,
+    "contract_fingerprint": "1c139e10efa61fff7023b82054590c5c2b015be037b3fae5ae4f7b48efb7c5bb",
+    "failure_count": 1,
+    "operation_family": "returns.create_authorization",
+    "plan": {
+      "actions": [
+        {
+          "key": null,
+          "kind": "goto",
+          "target": "/returns/create",
+          "value": null
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='return-order-id']",
+          "value": "{{order_id}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='return-item-sku']",
+          "value": "{{item_sku}}"
+        },
+        {
+          "key": null,
+          "kind": "select",
+          "target": "[data-testid='return-reason']",
+          "value": "{{reason}}"
+        },
+        {
+          "key": null,
+          "kind": "click",
+          "target": "[data-testid='return-submit']",
+          "value": null
+        }
+      ],
+      "operation_family": "returns.create_authorization",
+      "postcondition": "rma_created",
+      "required_args": [
+        "order_id",
+        "item_sku",
+        "reason"
+      ],
+      "reusable": true,
+      "start_path": "/returns/create"
+    },
+    "provenance": {
+      "created_by_request": "CH7-004",
+      "invalidations": [
+        "ui_contract_version,contract_fingerprint"
+      ],
+      "route": "INITIAL_ACQUISITION"
+    },
+    "reuse_count": 11,
+    "superseded_by": "returns_create_authorization_v2",
+    "ui_contract_version": "v1",
+    "validation_state": "INVALIDATED"
+  },
+  {
+    "capability_id": "returns_create_authorization_v2",
+    "capability_version": 2,
+    "contract_fingerprint": "556c209092dc7a808f453ffd94acf88a11ebdcbe124c46eb718c9f5d99e59048",
+    "failure_count": 0,
+    "operation_family": "returns.create_authorization",
+    "plan": {
+      "actions": [
+        {
+          "key": null,
+          "kind": "goto",
+          "target": "/returns/create",
+          "value": null
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='return-order-id-v2']",
+          "value": "{{order_id}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='return-item-sku-v2']",
+          "value": "{{item_sku}}"
+        },
+        {
+          "key": null,
+          "kind": "click",
+          "target": "[data-testid='return-next']",
+          "value": null
+        },
+        {
+          "key": null,
+          "kind": "select",
+          "target": "[data-testid='return-reason-v2']",
+          "value": "{{reason}}"
+        },
+        {
+          "key": null,
+          "kind": "click",
+          "target": "[data-testid='return-submit-v2']",
+          "value": null
+        }
+      ],
+      "operation_family": "returns.create_authorization",
+      "postcondition": "rma_created",
+      "required_args": [
+        "order_id",
+        "item_sku",
+        "reason"
+      ],
+      "reusable": true,
+      "start_path": "/returns/create"
+    },
+    "provenance": {
+      "created_by_request": "CH7-121",
+      "route": "RELEARNING"
+    },
+    "reuse_count": 7,
+    "superseded_by": null,
+    "ui_contract_version": "v2",
+    "validation_state": "VALIDATED"
+  },
+  {
+    "capability_id": "customers_update_contact_v1",
+    "capability_version": 1,
+    "contract_fingerprint": "732900b88f8ff22de01cee59637de09c4d72359a700457a0689def8c1328f683",
+    "failure_count": 0,
+    "operation_family": "customers.update_contact",
+    "plan": {
+      "actions": [
+        {
+          "key": null,
+          "kind": "goto",
+          "target": "/customers/contact",
+          "value": null
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='customer-id']",
+          "value": "{{customer_id}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='customer-email']",
+          "value": "{{email}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='customer-phone']",
+          "value": "{{phone}}"
+        },
+        {
+          "key": null,
+          "kind": "click",
+          "target": "[data-testid='customer-submit']",
+          "value": null
+        }
+      ],
+      "operation_family": "customers.update_contact",
+      "postcondition": "contact_updated",
+      "required_args": [
+        "customer_id",
+        "email",
+        "phone"
+      ],
+      "reusable": true,
+      "start_path": "/customers/contact"
+    },
+    "provenance": {
+      "created_by_request": "CH7-005",
+      "route": "INITIAL_ACQUISITION"
+    },
+    "reuse_count": 25,
+    "superseded_by": null,
+    "ui_contract_version": "v1",
+    "validation_state": "VALIDATED"
+  },
+  {
+    "capability_id": "inventory_reserve_stock_v1",
+    "capability_version": 1,
+    "contract_fingerprint": "3eb1c02e78ba3d669c982bc6da254633b1720672fe0e5182ef39c95981f542d9",
+    "failure_count": 1,
+    "operation_family": "inventory.reserve_stock",
+    "plan": {
+      "actions": [
+        {
+          "key": null,
+          "kind": "goto",
+          "target": "/inventory/reserve",
+          "value": null
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='inventory-sku']",
+          "value": "{{sku}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='warehouse-id']",
+          "value": "{{location}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='inventory-quantity']",
+          "value": "{{quantity}}"
+        },
+        {
+          "key": null,
+          "kind": "click",
+          "target": "[data-testid='inventory-submit']",
+          "value": null
+        }
+      ],
+      "operation_family": "inventory.reserve_stock",
+      "postcondition": "reservation_created",
+      "required_args": [
+        "sku",
+        "location",
+        "quantity"
+      ],
+      "reusable": true,
+      "start_path": "/inventory/reserve"
+    },
+    "provenance": {
+      "created_by_request": "CH7-006",
+      "invalidations": [
+        "ui_contract_version,contract_fingerprint"
+      ],
+      "route": "INITIAL_ACQUISITION"
+    },
+    "reuse_count": 11,
+    "superseded_by": "inventory_reserve_stock_v2",
+    "ui_contract_version": "v1",
+    "validation_state": "INVALIDATED"
+  },
+  {
+    "capability_id": "inventory_reserve_stock_v2",
+    "capability_version": 2,
+    "contract_fingerprint": "ff6abbc7ba34227881152a4cb746ec619085fb2ce362eeed2d5b9b0fbea863bd",
+    "failure_count": 0,
+    "operation_family": "inventory.reserve_stock",
+    "plan": {
+      "actions": [
+        {
+          "key": null,
+          "kind": "goto",
+          "target": "/inventory/reserve",
+          "value": null
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='inventory-sku-v2']",
+          "value": "{{sku}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='location-id']",
+          "value": "{{location}}"
+        },
+        {
+          "key": null,
+          "kind": "fill",
+          "target": "[data-testid='inventory-quantity-v2']",
+          "value": "{{quantity}}"
+        },
+        {
+          "key": null,
+          "kind": "click",
+          "target": "[data-testid='inventory-review']",
+          "value": null
+        },
+        {
+          "key": null,
+          "kind": "click",
+          "target": "[data-testid='inventory-confirm']",
+          "value": null
+        }
+      ],
+      "operation_family": "inventory.reserve_stock",
+      "postcondition": "reservation_created",
+      "required_args": [
+        "sku",
+        "location",
+        "quantity"
+      ],
+      "reusable": true,
+      "start_path": "/inventory/reserve"
+    },
+    "provenance": {
+      "created_by_request": "CH7-143",
+      "route": "RELEARNING"
+    },
+    "reuse_count": 7,
+    "superseded_by": null,
+    "ui_contract_version": "v2",
+    "validation_state": "VALIDATED"
+  }
+]

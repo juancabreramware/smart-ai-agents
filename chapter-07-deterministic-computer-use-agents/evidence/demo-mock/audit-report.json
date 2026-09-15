@@ -1,0 +1,49 @@
+{
+  "architectures": {
+    "baseline": {
+      "correct": 15,
+      "correctness_pct": 100.0,
+      "incorrect": 0,
+      "llm_avoidance_pct": 0.0,
+      "llm_calls": 15,
+      "measured_llm_cost_usd": 0.0,
+      "requests": 15,
+      "routing": {
+        "REASONING": 15
+      },
+      "stale_incorrect_reuses": 0
+    },
+    "naive": {
+      "correct": 11,
+      "correctness_pct": 73.3333,
+      "incorrect": 4,
+      "llm_avoidance_pct": 60.0,
+      "llm_calls": 6,
+      "measured_llm_cost_usd": 0.0,
+      "requests": 15,
+      "routing": {
+        "INITIAL_ACQUISITION": 6,
+        "NAIVE_REUSE": 9
+      },
+      "stale_incorrect_reuses": 4
+    },
+    "smart": {
+      "correct": 15,
+      "correctness_pct": 100.0,
+      "incorrect": 0,
+      "llm_avoidance_pct": 33.3333,
+      "llm_calls": 10,
+      "measured_llm_cost_usd": 0.0,
+      "requests": 15,
+      "routing": {
+        "DETERMINISTIC_REUSE": 5,
+        "INITIAL_ACQUISITION": 6,
+        "RELEARNING": 4
+      },
+      "stale_incorrect_reuses": 0
+    }
+  },
+  "identical_request_ids_and_order": true,
+  "passes_basic_integrity": true,
+  "schema_version": 1
+}

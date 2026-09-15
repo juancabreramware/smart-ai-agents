@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-agents-chapter-07"
+version = "0.1.0"
+description = "Chapter 7 companion implementation for Smart AI Agents: deterministic computer-use agents"
+requires-python = ">=3.11"
+dependencies = [
+  "playwright>=1.55",
+  "pydantic>=2.8",
+]
+
+[project.optional-dependencies]
+openai = ["openai>=1.100"]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"

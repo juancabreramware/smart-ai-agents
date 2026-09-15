@@ -1,0 +1,68 @@
+{
+  "architectures": {
+    "baseline": {
+      "correct": 150,
+      "correctness_pct": 100.0,
+      "incorrect": 0,
+      "latency_ms": {
+        "median": 0.008,
+        "p95": 0.012
+      },
+      "llm_call_avoidance_pct": 0.0,
+      "llm_calls": 150,
+      "llm_calls_avoided_vs_baseline_count": 0,
+      "measured_llm_cost_usd": 0.0,
+      "requests": 150,
+      "routing": {
+        "REASONING": 150
+      },
+      "stale_incorrect_reuses": 0
+    },
+    "naive": {
+      "correct": 118,
+      "correctness_pct": 78.6667,
+      "incorrect": 32,
+      "latency_ms": {
+        "median": 0.004,
+        "p95": 0.011
+      },
+      "llm_call_avoidance_pct": 84.0,
+      "llm_calls": 24,
+      "llm_calls_avoided_vs_baseline_count": 126,
+      "measured_llm_cost_reduction_pct": 0.0,
+      "measured_llm_cost_usd": 0.0,
+      "measured_llm_savings_vs_baseline_usd": 0.0,
+      "requests": 150,
+      "routing": {
+        "INITIAL_ACQUISITION": 6,
+        "NAIVE_REUSE": 126,
+        "REASONING_REQUIRED": 18
+      },
+      "stale_incorrect_reuses": 32
+    },
+    "smart": {
+      "correct": 150,
+      "correctness_pct": 100.0,
+      "incorrect": 0,
+      "latency_ms": {
+        "median": 0.018,
+        "p95": 0.032
+      },
+      "llm_call_avoidance_pct": 81.3333,
+      "llm_calls": 28,
+      "llm_calls_avoided_vs_baseline_count": 122,
+      "measured_llm_cost_reduction_pct": 0.0,
+      "measured_llm_cost_usd": 0.0,
+      "measured_llm_savings_vs_baseline_usd": 0.0,
+      "requests": 150,
+      "routing": {
+        "DETERMINISTIC_REUSE": 122,
+        "INITIAL_ACQUISITION": 6,
+        "REASONING_REQUIRED": 18,
+        "RELEARNING": 4
+      },
+      "stale_incorrect_reuses": 0
+    }
+  },
+  "schema_version": 1
+}
