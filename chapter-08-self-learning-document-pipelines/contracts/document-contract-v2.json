@@ -1,0 +1,81 @@
+{
+  "version": "V2",
+  "families": {
+    "invoice.northstar": {
+      "required_fields": [
+        "invoice_number",
+        "vendor_id",
+        "invoice_date",
+        "due_date",
+        "po_number",
+        "subtotal",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "changed_from_v1": true
+    },
+    "invoice.redwood": {
+      "required_fields": [
+        "invoice_number",
+        "account_number",
+        "invoice_date",
+        "service_period",
+        "subtotal",
+        "fees",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "changed_from_v1": false
+    },
+    "purchase_order.harborpoint": {
+      "required_fields": [
+        "po_number",
+        "supplier_id",
+        "order_date",
+        "buyer",
+        "ship_to",
+        "line_items",
+        "subtotal",
+        "total"
+      ],
+      "changed_from_v1": true
+    },
+    "shipping_notice.blueriver": {
+      "required_fields": [
+        "shipment_id",
+        "carrier",
+        "tracking_number",
+        "po_number",
+        "ship_date",
+        "expected_delivery",
+        "package_count"
+      ],
+      "changed_from_v1": true
+    },
+    "remittance.meridian": {
+      "required_fields": [
+        "payment_id",
+        "payment_date",
+        "payer",
+        "invoice_references",
+        "gross_amount",
+        "deductions",
+        "net_amount"
+      ],
+      "changed_from_v1": true
+    },
+    "tax_form.w9": {
+      "required_fields": [
+        "legal_name",
+        "business_name",
+        "tax_classification",
+        "address",
+        "tin_type",
+        "masked_tin"
+      ],
+      "changed_from_v1": false
+    }
+  }
+}

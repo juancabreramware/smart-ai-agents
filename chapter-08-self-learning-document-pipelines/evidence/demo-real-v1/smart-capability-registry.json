@@ -1,0 +1,218 @@
+{
+  "current": {
+    "invoice.redwood": {
+      "capability_id": "invoice.redwood",
+      "capability_version": 1,
+      "family_id": "invoice.redwood",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "invoice_number",
+        "account_number",
+        "invoice_date",
+        "service_period",
+        "subtotal",
+        "fees",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "fingerprint": "5b1657a1e04dec173479aa2c6f18b5653b955cc956a4e388591ccfd0a1acff9b",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-011"
+      }
+    },
+    "purchase_order.harborpoint": {
+      "capability_id": "purchase_order.harborpoint",
+      "capability_version": 1,
+      "family_id": "purchase_order.harborpoint",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "po_number",
+        "supplier_id",
+        "order_date",
+        "buyer",
+        "ship_to",
+        "line_items",
+        "subtotal",
+        "total"
+      ],
+      "fingerprint": "21894cf02c7b75214e0d7a23c6e903719790463837a7c2e392633a5f52541860",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-021"
+      }
+    },
+    "invoice.northstar": {
+      "capability_id": "invoice.northstar",
+      "capability_version": 2,
+      "family_id": "invoice.northstar",
+      "family_contract_version": "V2",
+      "required_fields": [
+        "invoice_number",
+        "vendor_id",
+        "invoice_date",
+        "due_date",
+        "po_number",
+        "subtotal",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "fingerprint": "cd0ec86d04c4500520daeeccc23242505e283b69c11843513bc7c392ad5e852f",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-091"
+      }
+    },
+    "shipping_notice.blueriver": {
+      "capability_id": "shipping_notice.blueriver",
+      "capability_version": 2,
+      "family_id": "shipping_notice.blueriver",
+      "family_contract_version": "V2",
+      "required_fields": [
+        "shipment_id",
+        "carrier",
+        "tracking_number",
+        "po_number",
+        "ship_date",
+        "expected_delivery",
+        "package_count"
+      ],
+      "fingerprint": "d22b6e2ba97ebd67e4aef164a980b6fccb8d2a752a27b0e027faca31adf1716d",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-123"
+      }
+    }
+  },
+  "history": [
+    {
+      "capability_id": "invoice.northstar",
+      "capability_version": 1,
+      "family_id": "invoice.northstar",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "invoice_number",
+        "vendor_id",
+        "invoice_date",
+        "due_date",
+        "po_number",
+        "subtotal",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "fingerprint": "81cb7c322624bfad7c17e13644f03730a71fac1ed7c6625e515b867eedcd9226",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-001"
+      }
+    },
+    {
+      "capability_id": "invoice.redwood",
+      "capability_version": 1,
+      "family_id": "invoice.redwood",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "invoice_number",
+        "account_number",
+        "invoice_date",
+        "service_period",
+        "subtotal",
+        "fees",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "fingerprint": "5b1657a1e04dec173479aa2c6f18b5653b955cc956a4e388591ccfd0a1acff9b",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-011"
+      }
+    },
+    {
+      "capability_id": "purchase_order.harborpoint",
+      "capability_version": 1,
+      "family_id": "purchase_order.harborpoint",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "po_number",
+        "supplier_id",
+        "order_date",
+        "buyer",
+        "ship_to",
+        "line_items",
+        "subtotal",
+        "total"
+      ],
+      "fingerprint": "21894cf02c7b75214e0d7a23c6e903719790463837a7c2e392633a5f52541860",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-021"
+      }
+    },
+    {
+      "capability_id": "shipping_notice.blueriver",
+      "capability_version": 1,
+      "family_id": "shipping_notice.blueriver",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "shipment_id",
+        "carrier",
+        "tracking_number",
+        "po_number",
+        "ship_date",
+        "expected_delivery",
+        "package_count"
+      ],
+      "fingerprint": "23a02d47318f6afc7f5839a6285d7c90d7dff6ca656a846fb162f63b0fba2d7d",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-031"
+      }
+    },
+    {
+      "capability_id": "invoice.northstar",
+      "capability_version": 2,
+      "family_id": "invoice.northstar",
+      "family_contract_version": "V2",
+      "required_fields": [
+        "invoice_number",
+        "vendor_id",
+        "invoice_date",
+        "due_date",
+        "po_number",
+        "subtotal",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "fingerprint": "cd0ec86d04c4500520daeeccc23242505e283b69c11843513bc7c392ad5e852f",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-091"
+      }
+    },
+    {
+      "capability_id": "shipping_notice.blueriver",
+      "capability_version": 2,
+      "family_id": "shipping_notice.blueriver",
+      "family_contract_version": "V2",
+      "required_fields": [
+        "shipment_id",
+        "carrier",
+        "tracking_number",
+        "po_number",
+        "ship_date",
+        "expected_delivery",
+        "package_count"
+      ],
+      "fingerprint": "d22b6e2ba97ebd67e4aef164a980b6fccb8d2a752a27b0e027faca31adf1716d",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-123"
+      }
+    }
+  ]
+}

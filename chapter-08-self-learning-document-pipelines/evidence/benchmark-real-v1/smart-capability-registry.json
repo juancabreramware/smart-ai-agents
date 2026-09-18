@@ -1,0 +1,337 @@
+{
+  "current": {
+    "invoice.redwood": {
+      "capability_id": "invoice.redwood",
+      "capability_version": 1,
+      "family_id": "invoice.redwood",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "invoice_number",
+        "account_number",
+        "invoice_date",
+        "service_period",
+        "subtotal",
+        "fees",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "fingerprint": "5b1657a1e04dec173479aa2c6f18b5653b955cc956a4e388591ccfd0a1acff9b",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-011"
+      }
+    },
+    "tax_form.w9": {
+      "capability_id": "tax_form.w9",
+      "capability_version": 1,
+      "family_id": "tax_form.w9",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "legal_name",
+        "business_name",
+        "tax_classification",
+        "address",
+        "tin_type",
+        "masked_tin"
+      ],
+      "fingerprint": "70541878946c583f2af103f8985b9962f791d435b05aab7ae2dce286b4fc464c",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-051"
+      }
+    },
+    "invoice.northstar": {
+      "capability_id": "invoice.northstar",
+      "capability_version": 2,
+      "family_id": "invoice.northstar",
+      "family_contract_version": "V2",
+      "required_fields": [
+        "invoice_number",
+        "vendor_id",
+        "invoice_date",
+        "due_date",
+        "po_number",
+        "subtotal",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "fingerprint": "cd0ec86d04c4500520daeeccc23242505e283b69c11843513bc7c392ad5e852f",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-091"
+      }
+    },
+    "purchase_order.harborpoint": {
+      "capability_id": "purchase_order.harborpoint",
+      "capability_version": 2,
+      "family_id": "purchase_order.harborpoint",
+      "family_contract_version": "V2",
+      "required_fields": [
+        "po_number",
+        "supplier_id",
+        "order_date",
+        "buyer",
+        "ship_to",
+        "line_items",
+        "subtotal",
+        "total"
+      ],
+      "fingerprint": "458fd9f478b58a0ae4328ddb5ee8361f2e9b963117025c17defd32961f595123",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-113"
+      }
+    },
+    "shipping_notice.blueriver": {
+      "capability_id": "shipping_notice.blueriver",
+      "capability_version": 2,
+      "family_id": "shipping_notice.blueriver",
+      "family_contract_version": "V2",
+      "required_fields": [
+        "shipment_id",
+        "carrier",
+        "tracking_number",
+        "po_number",
+        "ship_date",
+        "expected_delivery",
+        "package_count"
+      ],
+      "fingerprint": "d22b6e2ba97ebd67e4aef164a980b6fccb8d2a752a27b0e027faca31adf1716d",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-121"
+      }
+    },
+    "remittance.meridian": {
+      "capability_id": "remittance.meridian",
+      "capability_version": 2,
+      "family_id": "remittance.meridian",
+      "family_contract_version": "V2",
+      "required_fields": [
+        "payment_id",
+        "payment_date",
+        "payer",
+        "invoice_references",
+        "gross_amount",
+        "deductions",
+        "net_amount"
+      ],
+      "fingerprint": "9494a39dee189c4863632c85bb6b7b883e55f81161263db1e31d685d18b8625b",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-129"
+      }
+    }
+  },
+  "history": [
+    {
+      "capability_id": "invoice.northstar",
+      "capability_version": 1,
+      "family_id": "invoice.northstar",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "invoice_number",
+        "vendor_id",
+        "invoice_date",
+        "due_date",
+        "po_number",
+        "subtotal",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "fingerprint": "81cb7c322624bfad7c17e13644f03730a71fac1ed7c6625e515b867eedcd9226",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-001"
+      }
+    },
+    {
+      "capability_id": "invoice.redwood",
+      "capability_version": 1,
+      "family_id": "invoice.redwood",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "invoice_number",
+        "account_number",
+        "invoice_date",
+        "service_period",
+        "subtotal",
+        "fees",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "fingerprint": "5b1657a1e04dec173479aa2c6f18b5653b955cc956a4e388591ccfd0a1acff9b",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-011"
+      }
+    },
+    {
+      "capability_id": "purchase_order.harborpoint",
+      "capability_version": 1,
+      "family_id": "purchase_order.harborpoint",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "po_number",
+        "supplier_id",
+        "order_date",
+        "buyer",
+        "ship_to",
+        "line_items",
+        "subtotal",
+        "total"
+      ],
+      "fingerprint": "21894cf02c7b75214e0d7a23c6e903719790463837a7c2e392633a5f52541860",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-021"
+      }
+    },
+    {
+      "capability_id": "shipping_notice.blueriver",
+      "capability_version": 1,
+      "family_id": "shipping_notice.blueriver",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "shipment_id",
+        "carrier",
+        "tracking_number",
+        "po_number",
+        "ship_date",
+        "expected_delivery",
+        "package_count"
+      ],
+      "fingerprint": "23a02d47318f6afc7f5839a6285d7c90d7dff6ca656a846fb162f63b0fba2d7d",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-031"
+      }
+    },
+    {
+      "capability_id": "remittance.meridian",
+      "capability_version": 1,
+      "family_id": "remittance.meridian",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "payment_id",
+        "payment_date",
+        "payer",
+        "invoice_references",
+        "gross_amount",
+        "deductions",
+        "net_amount"
+      ],
+      "fingerprint": "0f85c705b75b3d0ab952ffd8deba393e842e4d496b5d6777544ef954e4466931",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-041"
+      }
+    },
+    {
+      "capability_id": "tax_form.w9",
+      "capability_version": 1,
+      "family_id": "tax_form.w9",
+      "family_contract_version": "V1",
+      "required_fields": [
+        "legal_name",
+        "business_name",
+        "tax_classification",
+        "address",
+        "tin_type",
+        "masked_tin"
+      ],
+      "fingerprint": "70541878946c583f2af103f8985b9962f791d435b05aab7ae2dce286b4fc464c",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-051"
+      }
+    },
+    {
+      "capability_id": "invoice.northstar",
+      "capability_version": 2,
+      "family_id": "invoice.northstar",
+      "family_contract_version": "V2",
+      "required_fields": [
+        "invoice_number",
+        "vendor_id",
+        "invoice_date",
+        "due_date",
+        "po_number",
+        "subtotal",
+        "tax",
+        "total",
+        "currency"
+      ],
+      "fingerprint": "cd0ec86d04c4500520daeeccc23242505e283b69c11843513bc7c392ad5e852f",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-091"
+      }
+    },
+    {
+      "capability_id": "purchase_order.harborpoint",
+      "capability_version": 2,
+      "family_id": "purchase_order.harborpoint",
+      "family_contract_version": "V2",
+      "required_fields": [
+        "po_number",
+        "supplier_id",
+        "order_date",
+        "buyer",
+        "ship_to",
+        "line_items",
+        "subtotal",
+        "total"
+      ],
+      "fingerprint": "458fd9f478b58a0ae4328ddb5ee8361f2e9b963117025c17defd32961f595123",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-113"
+      }
+    },
+    {
+      "capability_id": "shipping_notice.blueriver",
+      "capability_version": 2,
+      "family_id": "shipping_notice.blueriver",
+      "family_contract_version": "V2",
+      "required_fields": [
+        "shipment_id",
+        "carrier",
+        "tracking_number",
+        "po_number",
+        "ship_date",
+        "expected_delivery",
+        "package_count"
+      ],
+      "fingerprint": "d22b6e2ba97ebd67e4aef164a980b6fccb8d2a752a27b0e027faca31adf1716d",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-121"
+      }
+    },
+    {
+      "capability_id": "remittance.meridian",
+      "capability_version": 2,
+      "family_id": "remittance.meridian",
+      "family_contract_version": "V2",
+      "required_fields": [
+        "payment_id",
+        "payment_date",
+        "payer",
+        "invoice_references",
+        "gross_amount",
+        "deductions",
+        "net_amount"
+      ],
+      "fingerprint": "9494a39dee189c4863632c85bb6b7b883e55f81161263db1e31d685d18b8625b",
+      "validation_status": "validated",
+      "provenance": {
+        "request_id": "CH8-129"
+      }
+    }
+  ]
+}
