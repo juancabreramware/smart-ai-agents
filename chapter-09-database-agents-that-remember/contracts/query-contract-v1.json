@@ -1,0 +1,51 @@
+{
+  "sales.customer_revenue": {
+    "required_parameters": [
+      "customer_id",
+      "start_date",
+      "end_date"
+    ],
+    "result_type": "rows",
+    "changed_in_v2": false
+  },
+  "sales.order_status": {
+    "required_parameters": [
+      "status",
+      "start_date",
+      "end_date"
+    ],
+    "result_type": "rows",
+    "changed_in_v2": false
+  },
+  "inventory.low_stock": {
+    "required_parameters": [
+      "warehouse_id"
+    ],
+    "result_type": "rows",
+    "changed_in_v2": false
+  },
+  "procurement.supplier_spend": {
+    "required_parameters": [
+      "supplier_id",
+      "start_date",
+      "end_date"
+    ],
+    "result_type": "rows",
+    "changed_in_v2": false
+  },
+  "logistics.late_shipments": {
+    "required_parameters": [
+      "start_date",
+      "end_date"
+    ],
+    "result_type": "rows",
+    "changed_in_v2": false
+  },
+  "finance.invoice_aging": {
+    "required_parameters": [
+      "as_of_date"
+    ],
+    "result_type": "rows",
+    "changed_in_v2": false
+  }
+}

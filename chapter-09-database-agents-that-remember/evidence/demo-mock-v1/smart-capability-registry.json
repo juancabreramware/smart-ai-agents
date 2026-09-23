@@ -1,0 +1,172 @@
+{
+  "active": {
+    "sales.order_status": {
+      "capability_id": "sales.order_status",
+      "capability_version": 1,
+      "family_id": "sales.order_status",
+      "database_contract_version": "V1",
+      "sql_template": "SELECT o.order_id,o.status,o.order_date FROM orders o WHERE o.status=:status AND o.order_date BETWEEN :start_date AND :end_date ORDER BY o.order_id",
+      "required_parameters": [
+        "status",
+        "start_date",
+        "end_date"
+      ],
+      "schema_fingerprint": "fad720d5dbac5a5099f7d3e0e9a164b1fa3a889789ae4d2f9b26d4980fa677e6",
+      "status": "validated",
+      "provenance": {
+        "request_id": "CH9-011"
+      }
+    },
+    "inventory.low_stock": {
+      "capability_id": "inventory.low_stock",
+      "capability_version": 1,
+      "family_id": "inventory.low_stock",
+      "database_contract_version": "V1",
+      "sql_template": "SELECT i.sku,i.on_hand,p.reorder_threshold FROM inventory_balances i JOIN products p ON p.sku=i.sku WHERE i.warehouse_id=:warehouse_id AND i.on_hand < p.reorder_threshold ORDER BY i.sku",
+      "required_parameters": [
+        "warehouse_id"
+      ],
+      "schema_fingerprint": "fad720d5dbac5a5099f7d3e0e9a164b1fa3a889789ae4d2f9b26d4980fa677e6",
+      "status": "validated",
+      "provenance": {
+        "request_id": "CH9-021"
+      }
+    },
+    "sales.customer_revenue": {
+      "capability_id": "sales.customer_revenue",
+      "capability_version": 2,
+      "family_id": "sales.customer_revenue",
+      "database_contract_version": "V2",
+      "sql_template": "SELECT ROUND(COALESCE(SUM(oi.net_amount),0),2) AS revenue FROM orders o JOIN order_items oi ON oi.order_id=o.order_id WHERE o.customer_id=:customer_id AND o.order_date BETWEEN :start_date AND :end_date",
+      "required_parameters": [
+        "customer_id",
+        "start_date",
+        "end_date"
+      ],
+      "schema_fingerprint": "fad720d5dbac5a5099f7d3e0e9a164b1fa3a889789ae4d2f9b26d4980fa677e6",
+      "status": "validated",
+      "provenance": {
+        "request_id": "CH9-091"
+      }
+    },
+    "procurement.supplier_spend": {
+      "capability_id": "procurement.supplier_spend",
+      "capability_version": 2,
+      "family_id": "procurement.supplier_spend",
+      "database_contract_version": "V2",
+      "sql_template": "SELECT ROUND(COALESCE(SUM(poi.received_amount),0),2) AS spend FROM purchase_orders po JOIN purchase_order_items poi ON poi.po_id=po.po_id WHERE po.supplier_id=:supplier_id AND po.order_date BETWEEN :start_date AND :end_date",
+      "required_parameters": [
+        "supplier_id",
+        "start_date",
+        "end_date"
+      ],
+      "schema_fingerprint": "fad720d5dbac5a5099f7d3e0e9a164b1fa3a889789ae4d2f9b26d4980fa677e6",
+      "status": "validated",
+      "provenance": {
+        "request_id": "CH9-123"
+      }
+    }
+  },
+  "history": [
+    {
+      "capability_id": "sales.customer_revenue",
+      "capability_version": 1,
+      "family_id": "sales.customer_revenue",
+      "database_contract_version": "V1",
+      "sql_template": "SELECT ROUND(COALESCE(SUM(oi.extended_amount),0),2) AS revenue FROM orders o JOIN order_items oi ON oi.order_id=o.order_id WHERE o.customer_id=:customer_id AND o.order_date BETWEEN :start_date AND :end_date",
+      "required_parameters": [
+        "customer_id",
+        "start_date",
+        "end_date"
+      ],
+      "schema_fingerprint": "fad720d5dbac5a5099f7d3e0e9a164b1fa3a889789ae4d2f9b26d4980fa677e6",
+      "status": "validated",
+      "provenance": {
+        "request_id": "CH9-001"
+      }
+    },
+    {
+      "capability_id": "sales.order_status",
+      "capability_version": 1,
+      "family_id": "sales.order_status",
+      "database_contract_version": "V1",
+      "sql_template": "SELECT o.order_id,o.status,o.order_date FROM orders o WHERE o.status=:status AND o.order_date BETWEEN :start_date AND :end_date ORDER BY o.order_id",
+      "required_parameters": [
+        "status",
+        "start_date",
+        "end_date"
+      ],
+      "schema_fingerprint": "fad720d5dbac5a5099f7d3e0e9a164b1fa3a889789ae4d2f9b26d4980fa677e6",
+      "status": "validated",
+      "provenance": {
+        "request_id": "CH9-011"
+      }
+    },
+    {
+      "capability_id": "inventory.low_stock",
+      "capability_version": 1,
+      "family_id": "inventory.low_stock",
+      "database_contract_version": "V1",
+      "sql_template": "SELECT i.sku,i.on_hand,p.reorder_threshold FROM inventory_balances i JOIN products p ON p.sku=i.sku WHERE i.warehouse_id=:warehouse_id AND i.on_hand < p.reorder_threshold ORDER BY i.sku",
+      "required_parameters": [
+        "warehouse_id"
+      ],
+      "schema_fingerprint": "fad720d5dbac5a5099f7d3e0e9a164b1fa3a889789ae4d2f9b26d4980fa677e6",
+      "status": "validated",
+      "provenance": {
+        "request_id": "CH9-021"
+      }
+    },
+    {
+      "capability_id": "procurement.supplier_spend",
+      "capability_version": 1,
+      "family_id": "procurement.supplier_spend",
+      "database_contract_version": "V1",
+      "sql_template": "SELECT ROUND(COALESCE(SUM(po.total),0),2) AS spend FROM purchase_orders po WHERE po.supplier_id=:supplier_id AND po.order_date BETWEEN :start_date AND :end_date",
+      "required_parameters": [
+        "supplier_id",
+        "start_date",
+        "end_date"
+      ],
+      "schema_fingerprint": "fad720d5dbac5a5099f7d3e0e9a164b1fa3a889789ae4d2f9b26d4980fa677e6",
+      "status": "validated",
+      "provenance": {
+        "request_id": "CH9-031"
+      }
+    },
+    {
+      "capability_id": "sales.customer_revenue",
+      "capability_version": 2,
+      "family_id": "sales.customer_revenue",
+      "database_contract_version": "V2",
+      "sql_template": "SELECT ROUND(COALESCE(SUM(oi.net_amount),0),2) AS revenue FROM orders o JOIN order_items oi ON oi.order_id=o.order_id WHERE o.customer_id=:customer_id AND o.order_date BETWEEN :start_date AND :end_date",
+      "required_parameters": [
+        "customer_id",
+        "start_date",
+        "end_date"
+      ],
+      "schema_fingerprint": "fad720d5dbac5a5099f7d3e0e9a164b1fa3a889789ae4d2f9b26d4980fa677e6",
+      "status": "validated",
+      "provenance": {
+        "request_id": "CH9-091"
+      }
+    },
+    {
+      "capability_id": "procurement.supplier_spend",
+      "capability_version": 2,
+      "family_id": "procurement.supplier_spend",
+      "database_contract_version": "V2",
+      "sql_template": "SELECT ROUND(COALESCE(SUM(poi.received_amount),0),2) AS spend FROM purchase_orders po JOIN purchase_order_items poi ON poi.po_id=po.po_id WHERE po.supplier_id=:supplier_id AND po.order_date BETWEEN :start_date AND :end_date",
+      "required_parameters": [
+        "supplier_id",
+        "start_date",
+        "end_date"
+      ],
+      "schema_fingerprint": "fad720d5dbac5a5099f7d3e0e9a164b1fa3a889789ae4d2f9b26d4980fa677e6",
+      "status": "validated",
+      "provenance": {
+        "request_id": "CH9-123"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "requests": 15,
+    "correct": 15,
+    "llm_calls": 15,
+    "cost": 0.037388,
+    "stale_incorrect": 0,
+    "errors": 0
+  },
+  "smart": {
+    "requests": 15,
+    "correct": 15,
+    "llm_calls": 9,
+    "cost": 0.023108,
+    "stale_incorrect": 0,
+    "errors": 0
+  },
+  "naive": {
+    "requests": 15,
+    "correct": 13,
+    "llm_calls": 7,
+    "cost": 0.017764,
+    "stale_incorrect": 2,
+    "errors": 0
+  }
+}

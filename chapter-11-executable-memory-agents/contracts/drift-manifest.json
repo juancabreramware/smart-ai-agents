@@ -1,0 +1,12 @@
+{
+  "changed": [
+    "inventory_planning",
+    "invoice_escalation",
+    "supplier_scorecard",
+    "order_operations"
+  ],
+  "unchanged": [
+    "shipment_sla",
+    "customer_account"
+  ]
+}

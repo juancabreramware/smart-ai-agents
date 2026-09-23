@@ -1,0 +1,203 @@
+from __future__ import annotations
+import json,os,re,time
+from .contracts import public_contract,get_contract
+from .ground_truth import note_label
+from .capabilities import execute
+from .models import Candidate,ProviderResult,Usage
+from .typed_values import value_type_for_operation,typed_equal
+
+ALLOWED_LABELS={"weather","customs","damage","policy_exception","unknown"}
+
+# Human/model-readable semantics for the same trusted operations executed by capabilities.py.
+# These are PUBLIC business rules, not benchmark answers or hidden ground truth.
+OPERATION_SEMANTICS={
+    "inventory_reorder":{"steps":["available = on_hand - reserved","trigger_level = reorder_point + safety_buffer","triggered = available < trigger_level","if triggered: action = reorder","otherwise: action = no_action"],"value_rule":{"reorder":"order_quantity","no_action":"0"}},
+    "shipment_sla":{"steps":["triggered = eta_hours > (promised_hours + grace_hours)","if triggered: action = escalate","otherwise: action = no_action"],"value_rule":{"escalate":"true","no_action":"false"}},
+    "invoice_escalation":{"steps":["triggered = days_overdue > days_threshold AND amount >= amount_threshold","if triggered: action = escalate","otherwise: action = no_action"],"value_rule":{"escalate":"true","no_action":"false"}},
+    "supplier_score":{"steps":["score = round(on_time_pct * on_time_weight + quality_pct * quality_weight, 2)","if score < action_threshold: action = review","otherwise: action = no_action"],"value_rule":{"review":"score","no_action":"score"}},
+    "customer_action":{"steps":["triggered = risk_score > risk_threshold AND past_due is true","if triggered: action = review","otherwise: action = no_action"],"value_rule":{"review":"true","no_action":"false"}},
+    "order_priority":{"steps":["triggered = age_hours > sla_hours OR priority_flag is true","if triggered: action = prioritize","otherwise: action = no_action"],"value_rule":{"prioritize":"true","no_action":"false"}}
+}
+def _public_contract_with_semantics(r):
+    c=public_contract(r.family,r.contract_version)
+    op=c.get("operation")
+    if op not in OPERATION_SEMANTICS:
+        raise ValueError(f"No public operation semantics registered for {op!r}")
+    return {**c,"executable_semantics":OPERATION_SEMANTICS[op],"value_type":value_type_for_operation(op)}
+
+def payload(r,task):
+    return {
+        "task":task,
+        "request":{
+            "request_id":r.request_id,
+            "family":r.family,
+            "inputs":r.inputs,
+            "reasoning_required":r.reasoning_required,
+            "note":r.note
+        },
+        "public_contract":_public_contract_with_semantics(r),
+        "output_contract":{
+            "acquire_or_relearn_capability":{
+                "required":["family","contract_version","operation","dependencies",
+                            "policy_fingerprint","environment_fingerprint"]
+            },
+            "produce_current_business_decision":{
+                "required":["action","value","label"],
+                "label":"null unless reasoning_required; otherwise one of weather, customs, damage, policy_exception, unknown"
+            }
+        }.get(task,{}),
+        "instructions":(
+            "Return exactly one JSON object and no markdown. Use only the supplied request and public_contract. "
+            "The public_contract.executable_semantics field is authoritative: follow its steps literally and do not "
+            "substitute a customary industry formula or invent another business rule. Never infer hidden benchmark answers. "
+            "For acquisition/relearning, copy family, effective_contract_version as contract_version, operation, dependencies, "
+            "policy_fingerprint, and environment_fingerprint exactly from public_contract. "
+            "For a business decision, calculate action and value exactly from executable_semantics. "
+            "Return value using public_contract.value_type exactly: boolean means JSON true or false (never 0, 1, or strings); "
+            "integer means a JSON integer; number means a JSON number. "
+            "If reasoning_required is false, label must be null. If reasoning_required is true, classify only the note "
+            "as weather, customs, damage, policy_exception, or unknown."
+        )
+    }
+
+def parse(s):
+    s=(s or "").strip()
+    s=re.sub(r"^```(?:json)?\s*|\s*```$","",s,flags=re.I)
+    try:
+        o=json.loads(s)
+    except json.JSONDecodeError:
+        a,b=s.find("{"),s.rfind("}")
+        if a<0 or b<=a: raise ValueError(f"Provider did not return a JSON object: {s[:500]!r}")
+        o=json.loads(s[a:b+1])
+    if not isinstance(o,dict): raise ValueError("Provider JSON must be an object")
+    return o
+
+def _usage(r,ms,ip,op):
+    u=getattr(r,"usage",None)
+    i=int(getattr(u,"input_tokens",0) or 0)
+    z=int(getattr(u,"output_tokens",0) or 0)
+    return Usage(i,z,i/1e6*ip+z/1e6*op,ms)
+
+def normalize_acquisition(o,r):
+    c=get_contract(r.family,r.contract_version)
+    required=("family","contract_version","operation","dependencies","policy_fingerprint","environment_fingerprint")
+    missing=[k for k in required if k not in o]
+    if missing: raise ValueError(f"Malformed acquisition response; missing {missing}; raw={o!r}")
+    if o["family"]!=c.family: raise ValueError(f"Acquisition family mismatch; raw={o!r}")
+    if o["contract_version"]!=c.version: raise ValueError(f"Acquisition contract version mismatch; raw={o!r}")
+    if o["operation"]!=c.operation: raise ValueError(f"Acquisition operation mismatch; raw={o!r}")
+    if list(o["dependencies"])!=list(c.dependencies): raise ValueError(f"Acquisition dependencies mismatch; raw={o!r}")
+    if o["policy_fingerprint"]!=c.policy_fingerprint: raise ValueError(f"Acquisition policy fingerprint mismatch; raw={o!r}")
+    if o["environment_fingerprint"]!=c.environment_fingerprint: raise ValueError(f"Acquisition environment fingerprint mismatch; raw={o!r}")
+    return {k:o[k] for k in required}
+
+def normalize_decision(o,r):
+    c=get_contract(r.family,r.contract_version)
+    label=o.get("label")
+    if r.reasoning_required:
+        if label not in ALLOWED_LABELS:
+            raise ValueError(f"Malformed reasoning response; label must be one of {sorted(ALLOWED_LABELS)}; raw={o!r}")
+    else:
+        label=None
+
+    canonical=execute(c.operation,r.inputs,c,label)
+
+    # v1.0.2 deliberately keeps the v1.0.1 fail-closed comparison.
+    # The model now receives the exact public semantics, so disagreement remains a real provider-contract defect.
+    if "action" not in o or "value" not in o:
+        missing=[k for k in ("action","value") if k not in o]
+        raise ValueError(f"Malformed decision response; missing {missing}; raw={o!r}")
+    if o["action"]!=canonical.action:
+        raise ValueError(f"Provider action conflicts with public contract: model={o['action']!r}, canonical={canonical.action!r}, raw={o!r}")
+    mv=o["value"]; cv=canonical.value
+    kind=value_type_for_operation(c.operation)
+    try:
+        same=typed_equal(mv,cv,kind)
+    except ValueError as exc:
+        raise ValueError(f"Provider value violates typed public contract ({kind}): model={mv!r}, canonical={cv!r}, raw={o!r}") from exc
+    if not same:
+        raise ValueError(f"Provider value conflicts with public contract ({kind}): model={mv!r}, canonical={cv!r}, raw={o!r}")
+    return {"action":canonical.action,"value":canonical.value,"label":canonical.label}
+
+class MockProvider:
+    name="mock";model="deterministic-mock"
+    def acquire(self,r):
+        c=get_contract(r.family,r.contract_version)
+        return ProviderResult({"family":c.family,"contract_version":c.version,"operation":c.operation,
+            "dependencies":list(c.dependencies),"policy_fingerprint":c.policy_fingerprint,
+            "environment_fingerprint":c.environment_fingerprint},Usage())
+    def decide(self,r):
+        c=get_contract(r.family,r.contract_version)
+        d=execute(c.operation,r.inputs,c,note_label(r.note) if r.reasoning_required else None)
+        return ProviderResult({"action":d.action,"value":d.value,"label":d.label},Usage())
+
+
+def _strict_response_schema(p):
+    task=p.get("task")
+    if task=="acquire_or_relearn_capability":
+        schema={"type":"object","properties":{
+            "family":{"type":"string"},"contract_version":{"type":"string"},"operation":{"type":"string"},
+            "dependencies":{"type":"array","items":{"type":"string"}},"policy_fingerprint":{"type":"string"},
+            "environment_fingerprint":{"type":"string"}},
+            "required":["family","contract_version","operation","dependencies","policy_fingerprint","environment_fingerprint"],
+            "additionalProperties":False}
+        return {"type":"json_schema","name":"chapter11_capability_acquisition","strict":True,"schema":schema}
+    if task=="produce_current_business_decision":
+        kind=p["public_contract"]["value_type"]
+        value_schema={"boolean":{"type":"boolean"},"integer":{"type":"integer"},"number":{"type":"number"}}.get(kind)
+        if value_schema is None: raise ValueError(f"Unsupported public_contract.value_type={kind!r}")
+        schema={"type":"object","properties":{
+            "action":{"type":"string"},"value":value_schema,
+            "label":{"type":["string","null"],"enum":["weather","customs","damage","policy_exception","unknown",None]}},
+            "required":["action","value","label"],"additionalProperties":False}
+        return {"type":"json_schema","name":f"chapter11_business_decision_{kind}","strict":True,"schema":schema}
+    raise ValueError(f"No strict response schema for task={task!r}")
+
+def _parse_strict_response(r):
+    status=getattr(r,"status",None)
+    if status!="completed":
+        details=getattr(r,"incomplete_details",None)
+        raise ValueError(f"OpenAI response did not complete: status={status!r}, incomplete_details={details!r}")
+    text=getattr(r,"output_text",None)
+    if not text: raise ValueError("OpenAI strict structured response contained no output_text")
+    try: o=json.loads(text)
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"OpenAI strict structured response was not valid JSON: {text[:500]!r}") from exc
+    if not isinstance(o,dict): raise ValueError("OpenAI strict structured response must be a JSON object")
+    return o
+
+class OpenAIProvider:
+    name="openai"
+    def __init__(self):
+        from openai import OpenAI
+        self.client=OpenAI()
+        self.model=os.getenv("CH11_MODEL","gpt-5-mini")
+        self.ip=float(os.getenv("CH11_INPUT_USD_PER_MILLION","0"))
+        self.op=float(os.getenv("CH11_OUTPUT_USD_PER_MILLION","0"))
+    def call(self,p):
+        t=time.perf_counter()
+        fmt=_strict_response_schema(p)
+        r=self.client.responses.create(
+            model=self.model,
+            input=json.dumps(p,sort_keys=True),
+            text={"format":fmt}
+        )
+        ms=(time.perf_counter()-t)*1000
+        return _parse_strict_response(r),_usage(r,ms,self.ip,self.op)
+    def acquire(self,r):
+        raw,u=self.call(payload(r,"acquire_or_relearn_capability"))
+        return ProviderResult(normalize_acquisition(raw,r),u)
+    def decide(self,r):
+        raw,u=self.call(payload(r,"produce_current_business_decision"))
+        return ProviderResult(normalize_decision(raw,r),u)
+
+def from_env():
+    p=os.getenv("CH11_PROVIDER","mock").lower()
+    if p=="mock": return MockProvider()
+    if p=="openai": return OpenAIProvider()
+    raise ValueError(f"Unsupported CH11_PROVIDER={p}")
+
+def candidate(x):
+    o=x.output
+    return Candidate(o["family"],o["contract_version"],o["operation"],list(o["dependencies"]),
+                     o["policy_fingerprint"],o["environment_fingerprint"],{"source":"provider"})

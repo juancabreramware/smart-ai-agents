@@ -1,0 +1,1 @@
+OUTPUT_SCHEMA={'type':'object','properties':{'sql_template':{'type':'string'},'semantic_label':{'type':['string','null'],'enum':['none','demand_decline','fulfillment_risk','payment_risk','supplier_risk','other',None]}},'required':['sql_template','semantic_label'],'additionalProperties':False}

@@ -1,0 +1,14 @@
+QUERIES = {
+('sales.customer_revenue','V1'): "SELECT ROUND(COALESCE(SUM(oi.extended_amount),0),2) AS revenue FROM orders o JOIN order_items oi ON oi.order_id=o.order_id WHERE o.customer_id=:customer_id AND o.order_date BETWEEN :start_date AND :end_date",
+('sales.customer_revenue','V2'): "SELECT ROUND(COALESCE(SUM(oi.net_amount),0),2) AS revenue FROM orders o JOIN order_items oi ON oi.order_id=o.order_id WHERE o.customer_id=:customer_id AND o.order_date BETWEEN :start_date AND :end_date",
+('sales.order_status','V1'): "SELECT o.order_id,o.status,o.order_date FROM orders o WHERE o.status=:status AND o.order_date BETWEEN :start_date AND :end_date ORDER BY o.order_id",
+('sales.order_status','V2'): "SELECT o.order_id,o.status,o.order_date FROM orders o WHERE o.status=:status AND o.order_date BETWEEN :start_date AND :end_date ORDER BY o.order_id",
+('inventory.low_stock','V1'): "SELECT i.sku,i.on_hand,p.reorder_threshold FROM inventory_balances i JOIN products p ON p.sku=i.sku WHERE i.warehouse_id=:warehouse_id AND i.on_hand < p.reorder_threshold ORDER BY i.sku",
+('inventory.low_stock','V2'): "SELECT i.sku,i.on_hand,w.reorder_threshold FROM inventory_balances i JOIN warehouse_inventory_policy w ON w.sku=i.sku AND w.warehouse_id=i.warehouse_id WHERE i.warehouse_id=:warehouse_id AND i.on_hand < w.reorder_threshold ORDER BY i.sku",
+('procurement.supplier_spend','V1'): "SELECT ROUND(COALESCE(SUM(po.total),0),2) AS spend FROM purchase_orders po WHERE po.supplier_id=:supplier_id AND po.order_date BETWEEN :start_date AND :end_date",
+('procurement.supplier_spend','V2'): "SELECT ROUND(COALESCE(SUM(poi.received_amount),0),2) AS spend FROM purchase_orders po JOIN purchase_order_items poi ON poi.po_id=po.po_id WHERE po.supplier_id=:supplier_id AND po.order_date BETWEEN :start_date AND :end_date",
+('logistics.late_shipments','V1'): "SELECT shipment_id,order_id FROM shipments WHERE ship_date BETWEEN :start_date AND :end_date AND delivered_at > promised_date ORDER BY shipment_id",
+('logistics.late_shipments','V2'): "SELECT shipment_id,order_id FROM shipments WHERE ship_date BETWEEN :start_date AND :end_date AND delivered_at > service_commitment_date ORDER BY shipment_id",
+('finance.invoice_aging','V1'): "SELECT CASE WHEN julianday(:as_of_date)-julianday(due_date)<=30 THEN '0-30' WHEN julianday(:as_of_date)-julianday(due_date)<=60 THEN '31-60' ELSE '61+' END AS bucket, ROUND(SUM(total-paid_amount),2) AS balance FROM invoices WHERE invoice_date<=:as_of_date AND total>paid_amount GROUP BY bucket ORDER BY bucket",
+('finance.invoice_aging','V2'): "SELECT CASE WHEN julianday(:as_of_date)-julianday(due_date)<=30 THEN '0-30' WHEN julianday(:as_of_date)-julianday(due_date)<=60 THEN '31-60' ELSE '61+' END AS bucket, ROUND(SUM(total-paid_amount),2) AS balance FROM invoices WHERE invoice_date<=:as_of_date AND total>paid_amount GROUP BY bucket ORDER BY bucket",
+}

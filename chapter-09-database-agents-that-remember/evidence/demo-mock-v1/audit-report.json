@@ -1,0 +1,48 @@
+{
+  "identical_request_ids_order": true,
+  "identical_database_snapshots": true,
+  "architectures": {
+    "baseline": {
+      "requests": 15,
+      "correct": 15,
+      "incorrect": 0,
+      "component_accuracy": 1.0,
+      "llm_calls": 15,
+      "cost": 0.0,
+      "stale_incorrect": 0,
+      "routing": {
+        "reasoning": 15
+      }
+    },
+    "smart": {
+      "requests": 15,
+      "correct": 15,
+      "incorrect": 0,
+      "component_accuracy": 1.0,
+      "llm_calls": 9,
+      "cost": 0.0,
+      "stale_incorrect": 0,
+      "routing": {
+        "deterministic_reuse": 6,
+        "initial_acquisition": 4,
+        "reasoning_required": 3,
+        "relearning": 2
+      }
+    },
+    "naive": {
+      "requests": 15,
+      "correct": 13,
+      "incorrect": 2,
+      "component_accuracy": 0.8666666666666667,
+      "llm_calls": 7,
+      "cost": 0.0,
+      "stale_incorrect": 2,
+      "routing": {
+        "initial_acquisition": 4,
+        "naive_reuse": 8,
+        "reasoning_required": 3
+      }
+    }
+  },
+  "passes_basic_integrity": true
+}

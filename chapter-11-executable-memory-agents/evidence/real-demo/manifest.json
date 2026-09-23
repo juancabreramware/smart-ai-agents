@@ -1,0 +1,63 @@
+{
+  "mode": "demo",
+  "model": "gpt-5-mini",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pricing": {
+    "input_usd_per_million": "0.25",
+    "output_usd_per_million": "2.00"
+  },
+  "provider": "openai",
+  "python": "3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)]",
+  "request_count": 15,
+  "run_id": "ch11-20260923T020736Z-222f278b",
+  "summaries": {
+    "baseline": {
+      "accuracy": 1.0,
+      "correct": 15,
+      "input_tokens": 8186,
+      "llm_calls": 15,
+      "llm_calls_avoided_vs_150": null,
+      "measured_llm_cost_usd": 0.0185905,
+      "output_tokens": 8272,
+      "requests": 15,
+      "routes": {
+        "baseline_reasoning": 15
+      },
+      "stale_reuse": 0
+    },
+    "naive": {
+      "accuracy": 0.9333333333333333,
+      "correct": 14,
+      "input_tokens": 4949,
+      "llm_calls": 9,
+      "llm_calls_avoided_vs_150": null,
+      "measured_llm_cost_usd": 0.01175325,
+      "output_tokens": 5258,
+      "requests": 15,
+      "routes": {
+        "initial_acquisition": 6,
+        "naive_reuse": 6,
+        "reasoning_required": 3
+      },
+      "stale_reuse": 1
+    },
+    "smart": {
+      "accuracy": 1.0,
+      "correct": 15,
+      "input_tokens": 7178,
+      "llm_calls": 13,
+      "llm_calls_avoided_vs_150": null,
+      "measured_llm_cost_usd": 0.0153665,
+      "output_tokens": 6786,
+      "requests": 15,
+      "routes": {
+        "deterministic_reuse": 2,
+        "initial_acquisition": 6,
+        "reasoning_required": 3,
+        "relearning": 4
+      },
+      "stale_reuse": 0
+    }
+  },
+  "workload_hash": "cb64f901bcbee53f069c47afa310d8d34279ffb056d8a7db13a94dc6a6f6c569"
+}

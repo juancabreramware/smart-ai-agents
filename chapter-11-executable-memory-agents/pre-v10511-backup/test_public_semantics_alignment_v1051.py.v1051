@@ -1,0 +1,30 @@
+from src.provider import OPERATION_SEMANTICS,payload
+from src.workload import build
+from src.ground_truth import expected
+from src.contracts import get_contract
+from src.capabilities import execute
+
+EXPECTED={
+"inventory_reorder":{"steps":["triggered = (on_hand - reserved) < (reorder_point + safety_buffer)","if triggered: action = reorder","otherwise: action = no_action"],"value_rule":{"reorder":"order_quantity","no_action":"0"}},
+"shipment_sla":{"steps":["triggered = eta_hours > (promised_hours + grace_hours)","if triggered: action = escalate","otherwise: action = no_action"],"value_rule":{"escalate":"true","no_action":"false"}},
+"invoice_escalation":{"steps":["triggered = days_overdue > days_threshold AND amount >= amount_threshold","if triggered: action = escalate","otherwise: action = no_action"],"value_rule":{"escalate":"true","no_action":"false"}},
+"supplier_score":{"steps":["score = round(on_time_pct * on_time_weight + quality_pct * quality_weight, 2)","if score < action_threshold: action = review","otherwise: action = no_action"],"value_rule":{"review":"score","no_action":"score"}},
+"customer_action":{"steps":["triggered = risk_score > risk_threshold AND past_due is true","if triggered: action = review","otherwise: action = no_action"],"value_rule":{"review":"true","no_action":"false"}},
+"order_priority":{"steps":["triggered = age_hours > sla_hours OR priority_flag is true","if triggered: action = prioritize","otherwise: action = no_action"],"value_rule":{"prioritize":"true","no_action":"false"}}}
+
+def test_public_semantics_exact_reviewed_representation(): assert OPERATION_SEMANTICS==EXPECTED
+def test_no_known_bad_identifiers():
+    blob=repr(OPERATION_SEMANTICS)
+    for bad in ("target_stock","priority_window_hours","on_time_rate","quality_rate","minimum_score","balance_threshold","hold_account","review_supplier","place_order"): assert bad not in blob
+def test_all_150_trusted_runtime_action_value_match_ground_truth():
+    for r in build(150):
+        c=get_contract(r.family,r.contract_version); d=execute(c.operation,r.inputs,c,None); e=expected(r)
+        assert d.action==e.action,r.request_id
+        assert d.value==e.value,r.request_id
+def test_all_150_payloads_publish_actual_operation_semantics():
+    for r in build(150):
+        c=get_contract(r.family,r.contract_version); p=payload(r,"produce_current_business_decision")
+        assert p["public_contract"]["operation"]==c.operation
+        assert p["public_contract"]["executable_semantics"]==EXPECTED[c.operation]
+def test_exact_operation_coverage():
+    assert set(OPERATION_SEMANTICS)=={"inventory_reorder","shipment_sla","invoice_escalation","supplier_score","customer_action","order_priority"}

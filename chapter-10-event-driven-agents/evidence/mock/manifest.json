@@ -1,0 +1,72 @@
+{
+  "mode": "canonical",
+  "model": "deterministic-ground-truth-adapter",
+  "observation_count": 150,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pricing": {
+    "input_usd_per_million": "0",
+    "output_usd_per_million": "0"
+  },
+  "provider": "mock",
+  "python": "3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)]",
+  "run_id": "ch10-20260922T120041Z-8e2e69fa",
+  "summaries": {
+    "baseline": {
+      "accuracy": 1.0,
+      "correct": 150,
+      "duplicates": 0,
+      "false_negatives": 0,
+      "false_positives": 0,
+      "input_tokens": 0,
+      "llm_calls": 150,
+      "llm_calls_avoided_vs_150": 0,
+      "measured_llm_cost_usd": 0.0,
+      "observations": 150,
+      "output_tokens": 0,
+      "routes": {
+        "baseline_reasoning": 150
+      },
+      "stale_reuse": 0
+    },
+    "naive": {
+      "accuracy": 0.9733333333333334,
+      "correct": 146,
+      "duplicates": 0,
+      "false_negatives": 3,
+      "false_positives": 1,
+      "input_tokens": 0,
+      "llm_calls": 24,
+      "llm_calls_avoided_vs_150": 126,
+      "measured_llm_cost_usd": 0.0,
+      "observations": 150,
+      "output_tokens": 0,
+      "routes": {
+        "initial_acquisition": 6,
+        "naive_reuse": 126,
+        "reasoning_required": 18
+      },
+      "stale_reuse": 4
+    },
+    "smart": {
+      "accuracy": 1.0,
+      "correct": 150,
+      "duplicates": 0,
+      "false_negatives": 0,
+      "false_positives": 0,
+      "input_tokens": 0,
+      "llm_calls": 28,
+      "llm_calls_avoided_vs_150": 122,
+      "measured_llm_cost_usd": 0.0,
+      "observations": 150,
+      "output_tokens": 0,
+      "routes": {
+        "deterministic_reuse": 122,
+        "initial_acquisition": 6,
+        "reasoning_required": 18,
+        "relearning": 4
+      },
+      "stale_reuse": 0
+    }
+  },
+  "workload_hash": "eb4b617f26494106d8b63ee43463191ae5e3b2965b75175d0ed745f65538797e"
+}

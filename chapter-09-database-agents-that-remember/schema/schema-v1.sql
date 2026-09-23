@@ -1,0 +1,11 @@
+CREATE TABLE customers(customer_id TEXT PRIMARY KEY,name TEXT);
+CREATE TABLE orders(order_id TEXT PRIMARY KEY,customer_id TEXT,status TEXT,order_date TEXT);
+CREATE TABLE order_items(order_id TEXT,sku TEXT,qty INTEGER,unit_price NUMERIC,extended_amount NUMERIC,discount_amount NUMERIC,net_amount NUMERIC);
+CREATE TABLE products(sku TEXT PRIMARY KEY,name TEXT,reorder_threshold INTEGER);
+CREATE TABLE inventory_balances(warehouse_id TEXT,sku TEXT,on_hand INTEGER);
+CREATE TABLE warehouse_inventory_policy(warehouse_id TEXT,sku TEXT,reorder_threshold INTEGER);
+CREATE TABLE suppliers(supplier_id TEXT PRIMARY KEY,name TEXT);
+CREATE TABLE purchase_orders(po_id TEXT PRIMARY KEY,supplier_id TEXT,order_date TEXT,total NUMERIC);
+CREATE TABLE purchase_order_items(po_id TEXT,sku TEXT,ordered_amount NUMERIC,received_amount NUMERIC);
+CREATE TABLE shipments(shipment_id TEXT PRIMARY KEY,order_id TEXT,ship_date TEXT,promised_date TEXT,service_commitment_date TEXT,delivered_at TEXT);
+CREATE TABLE invoices(invoice_id TEXT PRIMARY KEY,invoice_date TEXT,due_date TEXT,total NUMERIC,paid_amount NUMERIC);

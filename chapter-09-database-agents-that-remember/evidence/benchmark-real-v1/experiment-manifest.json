@@ -1,0 +1,18 @@
+{
+  "chapter": 9,
+  "spec_version": "1.0",
+  "implementation_version": "0.1.0",
+  "planner": "openai",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "pricing": {
+    "input_per_million": 4.0,
+    "cached_input_per_million": 0.4,
+    "output_per_million": 20.0
+  },
+  "database_engine": "sqlite deterministic harness; PostgreSQL-compatible query architecture",
+  "workload_sha256": "d95950cc1140430498e1d810de660573334ffb83af421116232f2ee8e306718f",
+  "db_v1_sha256": "4c8369bfdc2b86665240d9b8698433de0e582abe7ad87e92946c1e1948acd9f1",
+  "db_v2_sha256": "4c8369bfdc2b86665240d9b8698433de0e582abe7ad87e92946c1e1948acd9f1",
+  "python": "3.13.1"
+}
