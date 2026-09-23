@@ -1,0 +1,8 @@
+[project]
+name = "chapter-12-know-when-not-to-optimize"
+version = "1.0.0"
+requires-python = ">=3.11"
+dependencies = []
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

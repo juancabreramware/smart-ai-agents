@@ -1,0 +1,87 @@
+from __future__ import annotations
+from dataclasses import asdict
+from .models import Request, OptimizationCase
+from .scoring import ground_truth, is_correct
+from .capabilities import Capability, promote, execute
+from .cost_model import deterministic_cost, assigned_promotion_cost, DEFAULTS
+from .optimizer import decide
+
+def _row(r,expected,actual,route,usage,overhead,stale=False,extra=None):
+    d={"request_id":r.request_id,"sequence":r.sequence,"family":r.family,"version":r.version,
+       "expected":asdict(expected),"actual":asdict(actual),"correct":is_correct(expected,actual),
+       "route":route,"llm_called":usage is not None,"input_tokens":usage.input_tokens if usage else 0,
+       "output_tokens":usage.output_tokens if usage else 0,"provider_cost_micro":usage.provider_cost_micro if usage else 0,
+       "optimization_overhead_micro":overhead,"stale_reuse":bool(stale)}
+    if extra:d.update(extra)
+    return d
+
+class AlwaysReason:
+    name="always_reason"
+    def __init__(self,provider): self.provider=provider
+    def handle(self,r):
+        expected=ground_truth(r); actual,u=self.provider.reason(r)
+        return _row(r,expected,actual,"reason",u,0)
+
+class AlwaysOptimize:
+    name="always_optimize"
+    def __init__(self,provider): self.provider=provider; self.caps={}
+    def handle(self,r):
+        expected=ground_truth(r); cap=self.caps.get(r.family)
+        if cap and cap.compatible(r):
+            actual=execute(cap,r)
+            return _row(r,expected,actual,"deterministic_reuse",None,deterministic_cost(r.family))
+        actual,u=self.provider.reason(r)
+        overhead=0; route="reason_and_promote"
+        if r.family!="ambiguous_judgment":
+            relearn=cap is not None
+            cap=promote(r,f"always-{r.family}-{r.sequence}",relearning=relearn); self.caps[r.family]=cap
+            overhead=cap.acquisition_cost_micro+cap.validation_cost_micro
+            route="relearn_and_promote" if relearn else "reason_and_promote"
+        return _row(r,expected,actual,route,u,overhead)
+
+class SmartSelective:
+    name="smart"
+    def __init__(self,provider):
+        self.provider=provider; self.caps={}; self.cases={}; self.last_versions={}
+        self.case_events=[]; self.capability_events=[]
+
+    def handle(self,r):
+        expected=ground_truth(r); case=self.cases.setdefault(r.family,OptimizationCase(r.family))
+        old_version=self.last_versions.get(r.family)
+        if old_version is not None and old_version!=r.version: case.drift_events_observed+=1
+        self.last_versions[r.family]=r.version
+        case.observed_count+=1; case.eligible_reuse_count+=1
+
+        cap=self.caps.get(r.family)
+        if cap and cap.compatible(r):
+            actual=execute(cap,r); overhead=deterministic_cost(r.family)
+            row=_row(r,expected,actual,"deterministic_reuse",None,overhead,False,{"optimization_decision":"PROMOTED"})
+            return row
+
+        # If a promoted capability drifted, relearn immediately: compatibility is a safety gate.
+        if cap and not cap.compatible(r):
+            actual,u=self.provider.reason(r)
+            case.reasoning_cost_total_micro+=u.provider_cost_micro
+            case.reasoning_cost_estimate_micro=case.reasoning_cost_total_micro//max(1,case.observed_count)
+            newcap=promote(r,f"smart-{r.family}-{r.sequence}",relearning=True); self.caps[r.family]=newcap
+            overhead=newcap.acquisition_cost_micro+newcap.validation_cost_micro
+            self.capability_events.append({"sequence":r.sequence,"family":r.family,"event":"RELEARN","version":r.version,"cost_micro":overhead})
+            return _row(r,expected,actual,"relearn_and_promote",u,overhead,False,{"optimization_decision":"PROMOTE"})
+
+        actual,u=self.provider.reason(r)
+        case.reasoning_cost_total_micro+=u.provider_cost_micro
+        # Estimate is based on actual calls, not all observations.
+        reason_calls=max(1,sum(1 for e in self.case_events if e.get("family")==r.family and e.get("llm_called"))+1)
+        case.reasoning_cost_estimate_micro=case.reasoning_cost_total_micro//reason_calls
+        decide(case,r.family)
+        event={"sequence":r.sequence,"family":r.family,"decision":case.decision,"decision_reason":case.decision_reason,
+               "observed_count":case.observed_count,"future_reuse_estimate":case.future_reuse_estimate,
+               "expected_reuse_value_micro":case.expected_reuse_value_micro,
+               "expected_optimization_cost_micro":case.expected_optimization_cost_micro,"llm_called":True}
+        self.case_events.append(event)
+        overhead=0; route="reason"
+        if case.decision=="PROMOTE":
+            newcap=promote(r,f"smart-{r.family}-{r.sequence}",False); self.caps[r.family]=newcap
+            overhead=newcap.acquisition_cost_micro+newcap.validation_cost_micro; route="reason_and_promote"
+            self.capability_events.append({"sequence":r.sequence,"family":r.family,"event":"PROMOTE","version":r.version,"cost_micro":overhead})
+        return _row(r,expected,actual,route,u,overhead,False,{"optimization_decision":case.decision,"optimization_reason":case.decision_reason})

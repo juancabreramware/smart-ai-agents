@@ -1,0 +1,15 @@
+{"family":"stable_recurring","payload":{"on_hand":45,"reorder_point":32,"reserved":5},"request_id":"REQ-001","reusable":true,"sequence":1,"version":1}
+{"family":"stable_rare","payload":{"amount":7777,"days_open":19},"request_id":"REQ-002","reusable":true,"sequence":2,"version":1}
+{"family":"high_validation_recurring","payload":{"delivery":66,"quality":66},"request_id":"REQ-003","reusable":true,"sequence":3,"version":1}
+{"family":"stable_recurring","payload":{"on_hand":48,"reorder_point":33,"reserved":4},"request_id":"REQ-004","reusable":true,"sequence":4,"version":1}
+{"family":"stable_rare","payload":{"amount":2279,"days_open":8},"request_id":"REQ-005","reusable":true,"sequence":5,"version":1}
+{"family":"volatile_recurring","payload":{"age_hours":19,"priority":false},"request_id":"REQ-006","reusable":true,"sequence":6,"version":1}
+{"family":"ambiguous_judgment","payload":{"dispute":false,"past_due":false,"risk":71,"tenure_years":6},"request_id":"REQ-025","reusable":true,"sequence":25,"version":1}
+{"family":"ambiguous_judgment","payload":{"dispute":true,"past_due":false,"risk":55,"tenure_years":4},"request_id":"REQ-040","reusable":true,"sequence":40,"version":1}
+{"family":"emerging_pattern","payload":{"eta_hours":67,"promised_hours":17},"request_id":"REQ-070","reusable":true,"sequence":70,"version":1}
+{"family":"stable_rare","payload":{"amount":2289,"days_open":5},"request_id":"REQ-091","reusable":true,"sequence":91,"version":1}
+{"family":"emerging_pattern","payload":{"eta_hours":14,"promised_hours":19},"request_id":"REQ-100","reusable":true,"sequence":100,"version":1}
+{"family":"volatile_recurring","payload":{"age_hours":56,"priority":false},"request_id":"REQ-121","reusable":true,"sequence":121,"version":3}
+{"family":"stable_recurring","payload":{"on_hand":41,"reorder_point":46,"reserved":16},"request_id":"REQ-140","reusable":true,"sequence":140,"version":1}
+{"family":"high_validation_recurring","payload":{"delivery":68,"quality":89},"request_id":"REQ-160","reusable":true,"sequence":160,"version":1}
+{"family":"volatile_recurring","payload":{"age_hours":43,"priority":true},"request_id":"REQ-180","reusable":true,"sequence":180,"version":3}

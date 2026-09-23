@@ -1,0 +1,15 @@
+{
+  "canonical_workload_hash": "4c7c170e03a20776be8776a566079d54416e73bc1402cad9afd04ef17a5a1723",
+  "cost_manifest_hash": "03ee972e18c613e2cbf3f41051d913fb1cdbf4f64a5b1a527e6c4e0a41c742d6",
+  "input_usd_per_million": 0.25,
+  "mode": "canonical",
+  "model": "deterministic-mock",
+  "output_usd_per_million": 2.0,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "policy_hash": "d81dacfc9e3d31a8eda73b3da6b4b7ed63793f208cc5cc8a6b553ce15de3a613",
+  "policy_version": "chapter12-v1.0.3",
+  "provider": "mock",
+  "python": "3.13.1",
+  "request_count": 180,
+  "run_id": "ch12-20260923T131619Z-94ab43d5"
+}

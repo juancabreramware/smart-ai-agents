@@ -1,0 +1,58 @@
+{
+  "assigned_cost_profiles": {
+    "ambiguous_judgment": {
+      "acquisition_micro": 999999,
+      "deterministic_execution_micro": 25,
+      "maintenance_micro": 0,
+      "relearning_micro": 999999,
+      "validation_micro": 999999
+    },
+    "emerging_pattern": {
+      "acquisition_micro": 2200,
+      "deterministic_execution_micro": 25,
+      "maintenance_micro": 300,
+      "relearning_micro": 2200,
+      "validation_micro": 1200
+    },
+    "high_validation_recurring": {
+      "acquisition_micro": 2400,
+      "deterministic_execution_micro": 25,
+      "maintenance_micro": 1200,
+      "relearning_micro": 2400,
+      "validation_micro": 9000
+    },
+    "stable_rare": {
+      "acquisition_micro": 3000,
+      "deterministic_execution_micro": 25,
+      "maintenance_micro": 300,
+      "relearning_micro": 3000,
+      "validation_micro": 1600
+    },
+    "stable_recurring": {
+      "acquisition_micro": 2200,
+      "deterministic_execution_micro": 25,
+      "maintenance_micro": 300,
+      "relearning_micro": 2200,
+      "validation_micro": 1200
+    },
+    "volatile_recurring": {
+      "acquisition_micro": 2500,
+      "deterministic_execution_micro": 25,
+      "maintenance_micro": 900,
+      "relearning_micro": 2500,
+      "validation_micro": 1500
+    }
+  },
+  "note": "Optimization overhead values are frozen benchmark-assigned accounting assumptions, not market prices. Promotion/relearning overhead includes acquisition or relearning + validation + declared maintenance.",
+  "policy": {
+    "forward_operating_horizon_requests": 180,
+    "min_observations": 4,
+    "recurrence_estimator": "wilson_lower_bound",
+    "recurrence_wilson_z": 2.576,
+    "safety_margin_micro": 1200
+  },
+  "provider_pricing": {
+    "input_usd_per_million": 0.25,
+    "output_usd_per_million": 2.0
+  }
+}

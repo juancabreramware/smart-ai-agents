@@ -1,0 +1,6 @@
+{"cost_micro":3700,"event":"PROMOTE","family":"stable_recurring","sequence":30,"version":1}
+{"cost_micro":4900,"event":"PROMOTE","family":"stable_rare","sequence":77,"version":1}
+{"cost_micro":4900,"event":"PROMOTE","family":"volatile_recurring","sequence":88,"version":1}
+{"cost_micro":0,"event":"RETIRE","family":"volatile_recurring","reason":"BREAK_EVEN_NOT_YET_CLEARED","sequence":93,"version":2}
+{"cost_micro":4900,"event":"PROMOTE","family":"volatile_recurring","sequence":134,"version":3}
+{"cost_micro":3700,"event":"PROMOTE","family":"emerging_pattern","sequence":150,"version":1}

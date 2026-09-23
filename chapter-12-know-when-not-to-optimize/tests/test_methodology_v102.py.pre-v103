@@ -1,0 +1,36 @@
+from pathlib import Path
+from src import optimizer
+
+def test_forward_operating_horizon_is_declared_and_not_benchmark_remainder():
+    assert optimizer.FORWARD_OPERATING_HORIZON_REQUESTS == 180
+    src=Path("src/optimizer.py").read_text(encoding="utf8")
+    compact=src.replace(" ","")
+    assert "180-current" not in compact
+    assert "remaining_requests" not in src
+
+def test_arrival_density_uses_global_sequence_with_forward_horizon():
+    from src.models import OptimizationCase
+    c=OptimizationCase("stable_recurring",observed_count=4,eligible_reuse_count=4,
+                       reasoning_cost_estimate_micro=1200)
+    optimizer.decide(c,"stable_recurring",20)
+    assert c.future_reuse_estimate == 36
+
+def test_sparse_pattern_stays_economically_distinct():
+    from src.models import OptimizationCase
+    c=OptimizationCase("emerging_pattern",observed_count=4,eligible_reuse_count=4,
+                       reasoning_cost_estimate_micro=1200)
+    optimizer.decide(c,"emerging_pattern",66)
+    assert c.future_reuse_estimate < 20
+
+def test_structurally_unsafe_work_remains_reason_only():
+    from src.models import OptimizationCase
+    c=OptimizationCase("ambiguous_judgment",observed_count=30,eligible_reuse_count=30,
+                       reasoning_cost_estimate_micro=1200)
+    optimizer.decide(c,"ambiguous_judgment",180)
+    assert c.decision=="REASON_ONLY"
+    assert c.decision_reason=="TASK_NOT_SAFELY_REDUCIBLE"
+
+def test_production_execution_path_still_passes_sequence():
+    src=Path("src/architectures.py").read_text(encoding="utf8")
+    assert src.count("decide(case,r.family,r.sequence)") >= 2
+    assert "post_promotion_reevaluation" in src

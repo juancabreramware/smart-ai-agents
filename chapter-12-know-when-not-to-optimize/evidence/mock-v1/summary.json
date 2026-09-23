@@ -1,0 +1,53 @@
+{
+  "always_optimize": {
+    "accuracy": 1.0,
+    "correct": 180,
+    "deterministic_reuses": 143,
+    "input_tokens": 24050,
+    "lifetime_benchmark_cost_micro": 62489,
+    "llm_calls": 37,
+    "optimization_investments": 7,
+    "optimization_overhead_micro": 43175,
+    "output_tokens": 6660,
+    "provider_cost_micro": 19314,
+    "requests": 180,
+    "stale_reuse_errors": 0,
+    "total_tokens": 30710,
+    "wasted_optimization_cost_micro": 0,
+    "wasted_optimization_investments": 0
+  },
+  "always_reason": {
+    "accuracy": 1.0,
+    "correct": 180,
+    "deterministic_reuses": 0,
+    "input_tokens": 117000,
+    "lifetime_benchmark_cost_micro": 93960,
+    "llm_calls": 180,
+    "optimization_investments": 0,
+    "optimization_overhead_micro": 0,
+    "output_tokens": 32400,
+    "provider_cost_micro": 93960,
+    "requests": 180,
+    "stale_reuse_errors": 0,
+    "total_tokens": 149400,
+    "wasted_optimization_cost_micro": 0,
+    "wasted_optimization_investments": 0
+  },
+  "smart": {
+    "accuracy": 1.0,
+    "correct": 180,
+    "deterministic_reuses": 51,
+    "input_tokens": 83850,
+    "lifetime_benchmark_cost_micro": 90713,
+    "llm_calls": 129,
+    "optimization_investments": 5,
+    "optimization_overhead_micro": 23375,
+    "output_tokens": 23220,
+    "provider_cost_micro": 67338,
+    "requests": 180,
+    "stale_reuse_errors": 0,
+    "total_tokens": 107070,
+    "wasted_optimization_cost_micro": 4900,
+    "wasted_optimization_investments": 1
+  }
+}

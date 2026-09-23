@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+.env
+*.pyc
+evidence/benchmark-real-v1/*
+evidence/demo-real-v1/*
