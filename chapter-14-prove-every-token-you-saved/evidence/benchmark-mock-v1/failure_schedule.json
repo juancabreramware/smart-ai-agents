@@ -1,0 +1,9 @@
+{
+  "note": "Frozen by workload generator before execution.",
+  "retry_or_failure_requests": [
+    "REQ-0127",
+    "REQ-0145",
+    "REQ-0151",
+    "REQ-0214"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "errors": [],
+  "passed": true,
+  "recomputed": {
+    "baseline": {
+      "attempts": 16,
+      "input_tokens": 2471,
+      "output_tokens": 3121,
+      "provider_cost_micro": 6860,
+      "successful_calls": 16,
+      "total_tokens": 5592
+    },
+    "correct_baseline": 16,
+    "correct_smart": 16,
+    "deterministic_reuses": 4,
+    "full_benchmark_savings_micro": 154,
+    "provider_savings_micro": 2134,
+    "request_count": 16,
+    "smart": {
+      "attempts": 12,
+      "input_tokens": 1846,
+      "output_tokens": 2132,
+      "provider_cost_micro": 4726,
+      "successful_calls": 12,
+      "total_tokens": 3978
+    }
+  }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "baseline_attempts": 60,
+    "baseline_provider_cost_micro": 25042,
+    "baseline_tokens": 20596,
+    "requests": 60,
+    "smart_attempts": 14,
+    "smart_provider_cost_micro": 5408,
+    "smart_reuses": 46,
+    "smart_tokens": 4591,
+    "wave": 1
+  },
+  {
+    "baseline_attempts": 60,
+    "baseline_provider_cost_micro": 22746,
+    "baseline_tokens": 19464,
+    "requests": 60,
+    "smart_attempts": 4,
+    "smart_provider_cost_micro": 1748,
+    "smart_reuses": 56,
+    "smart_tokens": 1422,
+    "wave": 2
+  },
+  {
+    "baseline_attempts": 63,
+    "baseline_provider_cost_micro": 26044,
+    "baseline_tokens": 21074,
+    "requests": 60,
+    "smart_attempts": 5,
+    "smart_provider_cost_micro": 2085,
+    "smart_reuses": 55,
+    "smart_tokens": 1716,
+    "wave": 3
+  },
+  {
+    "baseline_attempts": 61,
+    "baseline_provider_cost_micro": 21250,
+    "baseline_tokens": 19428,
+    "requests": 60,
+    "smart_attempts": 4,
+    "smart_provider_cost_micro": 1155,
+    "smart_reuses": 56,
+    "smart_tokens": 1149,
+    "wave": 4
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "chapter": 14,
+  "cost_hash": "cf1ddaf2bb2cbd6475c44e34160be22449ff217d55e6ced10f55b7996d03f9cf",
+  "cost_version": "chapter14-cost-manifest-v1.0.0",
+  "implementation_version": "1.0.2",
+  "mode": "canonical",
+  "model": "gpt-5-mini",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pricing_hash": "9d5caf4aef3693340cf2a6b59dafa55acff1e0a47cc8c63e60d87fda9b81573a",
+  "pricing_version": "chapter14-pricing-v1.0.0",
+  "provider": "OpenAIProvider",
+  "public_contract_hash": "fad987144b3369587c3ce03891a0476a63e3793b8241bcff0e094a8ab420a9d8",
+  "public_contract_version": "chapter14-public-contract-v1.0.0",
+  "python": "3.13.1",
+  "request_count": 240,
+  "workload_hash": "225de063eb385c3be7335571b3563597b34f30e12cf46685458957368b88c0d8",
+  "workload_version": "chapter14-workload-v1.0.0"
+}

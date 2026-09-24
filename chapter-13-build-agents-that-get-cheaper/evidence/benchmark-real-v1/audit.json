@@ -1,0 +1,42 @@
+{
+  "errors": [],
+  "passed": true,
+  "recomputed": {
+    "compounding_smart": {
+      "accuracy": 1.0,
+      "correct": 240,
+      "deterministic_reuses": 210,
+      "input_tokens": 4545,
+      "llm_calls": 30,
+      "output_tokens": 4694,
+      "provider_cost_micro": 10524,
+      "requests": 240,
+      "stale_reuse_errors": 0,
+      "total_tokens": 9239
+    },
+    "episodic_reuse": {
+      "accuracy": 1.0,
+      "correct": 240,
+      "deterministic_reuses": 176,
+      "input_tokens": 9701,
+      "llm_calls": 64,
+      "output_tokens": 10061,
+      "provider_cost_micro": 22547,
+      "requests": 240,
+      "stale_reuse_errors": 0,
+      "total_tokens": 19762
+    },
+    "stateless_reason": {
+      "accuracy": 1.0,
+      "correct": 240,
+      "deterministic_reuses": 0,
+      "input_tokens": 36396,
+      "llm_calls": 240,
+      "output_tokens": 38685,
+      "provider_cost_micro": 86469,
+      "requests": 240,
+      "stale_reuse_errors": 0,
+      "total_tokens": 75081
+    }
+  }
+}

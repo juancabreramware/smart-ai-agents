@@ -1,0 +1,6 @@
+{"assigned_cost_micro": 300, "capability_id": "inventory:inventory_reorder:v1", "contract_version": "v1", "event": "PROMOTE", "family": "inventory", "request_id": "REQ-0007", "seq": 7}
+{"assigned_cost_micro": 300, "capability_id": "shipment:shipment_escalate:v1", "contract_version": "v1", "event": "PROMOTE", "family": "shipment", "request_id": "REQ-0008", "seq": 8}
+{"assigned_cost_micro": 300, "capability_id": "invoice:invoice_escalate:v1", "contract_version": "v1", "event": "PROMOTE", "family": "invoice", "request_id": "REQ-0009", "seq": 9}
+{"assigned_cost_micro": 300, "capability_id": "supplier:supplier_review:v1", "contract_version": "v1", "event": "PROMOTE", "family": "supplier", "request_id": "REQ-0010", "seq": 10}
+{"assigned_cost_micro": 300, "capability_id": "customer:customer_manual_review:v1", "contract_version": "v1", "event": "PROMOTE", "family": "customer", "request_id": "REQ-0011", "seq": 11}
+{"assigned_cost_micro": 300, "capability_id": "order:order_priority:v1", "contract_version": "v1", "event": "PROMOTE", "family": "order", "request_id": "REQ-0012", "seq": 12}

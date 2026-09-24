@@ -1,0 +1,240 @@
+{"family": "shipment", "payload": {"elapsed_hours": 32, "priority": false}, "reasoning_required": false, "request_id": "REQ-001", "sequence": 1, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 1195, "days_open": 2}, "reasoning_required": false, "request_id": "REQ-002", "sequence": 2, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 107, "reorder_point": 81, "reserved": 2}, "reasoning_required": false, "request_id": "REQ-003", "sequence": 3, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 80, "reorder_point": 48, "reserved": 12}, "reasoning_required": false, "request_id": "REQ-004", "sequence": 4, "version": "v1", "wave": 1}
+{"family": "supplier", "payload": {"delivery": 100, "quality": 69}, "reasoning_required": false, "request_id": "REQ-005", "sequence": 5, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 76, "reorder_point": 40, "reserved": 11}, "reasoning_required": false, "request_id": "REQ-006", "sequence": 6, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 27, "reorder_point": 49, "reserved": 2}, "reasoning_required": false, "request_id": "REQ-007", "sequence": 7, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 561, "days_open": 8}, "reasoning_required": false, "request_id": "REQ-008", "sequence": 8, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 836, "days_open": 17}, "reasoning_required": false, "request_id": "REQ-009", "sequence": 9, "version": "v1", "wave": 1}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 23}, "reasoning_required": false, "request_id": "REQ-010", "sequence": 10, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 115, "reorder_point": 89, "reserved": 10}, "reasoning_required": false, "request_id": "REQ-011", "sequence": 11, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 84, "reorder_point": 41, "reserved": 36}, "reasoning_required": false, "request_id": "REQ-012", "sequence": 12, "version": "v1", "wave": 1}
+{"family": "customer", "payload": {"dispute": true, "risk_score": 35}, "reasoning_required": false, "request_id": "REQ-013", "sequence": 13, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 20, "reorder_point": 29, "reserved": 14}, "reasoning_required": false, "request_id": "REQ-014", "sequence": 14, "version": "v1", "wave": 1}
+{"family": "shipment", "payload": {"elapsed_hours": 42, "priority": true}, "reasoning_required": false, "request_id": "REQ-015", "sequence": 15, "version": "v1", "wave": 1}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 23}, "reasoning_required": false, "request_id": "REQ-016", "sequence": 16, "version": "v1", "wave": 1}
+{"family": "supplier", "payload": {"delivery": 74, "quality": 84}, "reasoning_required": false, "request_id": "REQ-017", "sequence": 17, "version": "v1", "wave": 1}
+{"family": "order", "payload": {"age_hours": 60, "priority": false}, "reasoning_required": false, "request_id": "REQ-018", "sequence": 18, "version": "v1", "wave": 1}
+{"family": "customer", "payload": {"dispute": true, "risk_score": 92}, "reasoning_required": false, "request_id": "REQ-019", "sequence": 19, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 6045, "days_open": 12}, "reasoning_required": false, "request_id": "REQ-020", "sequence": 20, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 8555, "days_open": 9}, "reasoning_required": false, "request_id": "REQ-021", "sequence": 21, "version": "v1", "wave": 1}
+{"family": "shipment", "payload": {"elapsed_hours": 21, "priority": false}, "reasoning_required": false, "request_id": "REQ-022", "sequence": 22, "version": "v1", "wave": 1}
+{"family": "shipment", "payload": {"elapsed_hours": 45, "priority": true}, "reasoning_required": true, "request_id": "REQ-023", "sequence": 23, "version": "v1", "wave": 1}
+{"family": "shipment", "payload": {"elapsed_hours": 48, "priority": false}, "reasoning_required": false, "request_id": "REQ-024", "sequence": 24, "version": "v1", "wave": 1}
+{"family": "order", "payload": {"age_hours": 18, "priority": false}, "reasoning_required": false, "request_id": "REQ-025", "sequence": 25, "version": "v1", "wave": 1}
+{"family": "supplier", "payload": {"delivery": 69, "quality": 80}, "reasoning_required": false, "request_id": "REQ-026", "sequence": 26, "version": "v1", "wave": 1}
+{"family": "order", "payload": {"age_hours": 51, "priority": true}, "reasoning_required": false, "request_id": "REQ-027", "sequence": 27, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 126, "reorder_point": 40, "reserved": 13}, "reasoning_required": false, "request_id": "REQ-028", "sequence": 28, "version": "v1", "wave": 1}
+{"family": "order", "payload": {"age_hours": 26, "priority": true}, "reasoning_required": false, "request_id": "REQ-029", "sequence": 29, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 4644, "days_open": 22}, "reasoning_required": false, "request_id": "REQ-030", "sequence": 30, "version": "v1", "wave": 1}
+{"family": "supplier", "payload": {"delivery": 79, "quality": 83}, "reasoning_required": false, "request_id": "REQ-031", "sequence": 31, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 5084, "days_open": 24}, "reasoning_required": false, "request_id": "REQ-032", "sequence": 32, "version": "v1", "wave": 1}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 28}, "reasoning_required": false, "request_id": "REQ-033", "sequence": 33, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 6430, "days_open": 23}, "reasoning_required": false, "request_id": "REQ-034", "sequence": 34, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 39, "reorder_point": 56, "reserved": 22}, "reasoning_required": false, "request_id": "REQ-035", "sequence": 35, "version": "v1", "wave": 1}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 29}, "reasoning_required": false, "request_id": "REQ-036", "sequence": 36, "version": "v1", "wave": 1}
+{"family": "shipment", "payload": {"elapsed_hours": 55, "priority": false}, "reasoning_required": false, "request_id": "REQ-037", "sequence": 37, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 70, "reorder_point": 52, "reserved": 15}, "reasoning_required": false, "request_id": "REQ-038", "sequence": 38, "version": "v1", "wave": 1}
+{"family": "supplier", "payload": {"delivery": 92, "quality": 93}, "reasoning_required": false, "request_id": "REQ-039", "sequence": 39, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 99, "reorder_point": 64, "reserved": 24}, "reasoning_required": false, "request_id": "REQ-040", "sequence": 40, "version": "v1", "wave": 1}
+{"family": "supplier", "payload": {"delivery": 92, "quality": 86}, "reasoning_required": false, "request_id": "REQ-041", "sequence": 41, "version": "v1", "wave": 1}
+{"family": "supplier", "payload": {"delivery": 66, "quality": 95}, "reasoning_required": false, "request_id": "REQ-042", "sequence": 42, "version": "v1", "wave": 1}
+{"family": "supplier", "payload": {"delivery": 76, "quality": 89}, "reasoning_required": false, "request_id": "REQ-043", "sequence": 43, "version": "v1", "wave": 1}
+{"family": "shipment", "payload": {"elapsed_hours": 76, "priority": false}, "reasoning_required": false, "request_id": "REQ-044", "sequence": 44, "version": "v1", "wave": 1}
+{"family": "order", "payload": {"age_hours": 8, "priority": true}, "reasoning_required": false, "request_id": "REQ-045", "sequence": 45, "version": "v1", "wave": 1}
+{"family": "order", "payload": {"age_hours": 40, "priority": false}, "reasoning_required": false, "request_id": "REQ-046", "sequence": 46, "version": "v1", "wave": 1}
+{"family": "shipment", "payload": {"elapsed_hours": 79, "priority": true}, "reasoning_required": true, "request_id": "REQ-047", "sequence": 47, "version": "v1", "wave": 1}
+{"family": "customer", "payload": {"dispute": true, "risk_score": 37}, "reasoning_required": false, "request_id": "REQ-048", "sequence": 48, "version": "v1", "wave": 1}
+{"family": "shipment", "payload": {"elapsed_hours": 71, "priority": true}, "reasoning_required": false, "request_id": "REQ-049", "sequence": 49, "version": "v1", "wave": 1}
+{"family": "order", "payload": {"age_hours": 76, "priority": false}, "reasoning_required": false, "request_id": "REQ-050", "sequence": 50, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 77, "reorder_point": 68, "reserved": 28}, "reasoning_required": false, "request_id": "REQ-051", "sequence": 51, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 4086, "days_open": 11}, "reasoning_required": false, "request_id": "REQ-052", "sequence": 52, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 6705, "days_open": 12}, "reasoning_required": false, "request_id": "REQ-053", "sequence": 53, "version": "v1", "wave": 1}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 40}, "reasoning_required": false, "request_id": "REQ-054", "sequence": 54, "version": "v1", "wave": 1}
+{"family": "order", "payload": {"age_hours": 17, "priority": false}, "reasoning_required": false, "request_id": "REQ-055", "sequence": 55, "version": "v1", "wave": 1}
+{"family": "supplier", "payload": {"delivery": 100, "quality": 82}, "reasoning_required": false, "request_id": "REQ-056", "sequence": 56, "version": "v1", "wave": 1}
+{"family": "supplier", "payload": {"delivery": 68, "quality": 95}, "reasoning_required": false, "request_id": "REQ-057", "sequence": 57, "version": "v1", "wave": 1}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 90}, "reasoning_required": false, "request_id": "REQ-058", "sequence": 58, "version": "v1", "wave": 1}
+{"family": "shipment", "payload": {"elapsed_hours": 22, "priority": false}, "reasoning_required": false, "request_id": "REQ-059", "sequence": 59, "version": "v1", "wave": 1}
+{"family": "shipment", "payload": {"elapsed_hours": 40, "priority": false}, "reasoning_required": false, "request_id": "REQ-060", "sequence": 60, "version": "v1", "wave": 1}
+{"family": "order", "payload": {"age_hours": 71, "priority": true}, "reasoning_required": false, "request_id": "REQ-061", "sequence": 61, "version": "v1", "wave": 2}
+{"family": "inventory", "payload": {"on_hand": 95, "reorder_point": 54, "reserved": 26}, "reasoning_required": false, "request_id": "REQ-062", "sequence": 62, "version": "v1", "wave": 2}
+{"family": "shipment", "payload": {"elapsed_hours": 83, "priority": true}, "reasoning_required": false, "request_id": "REQ-063", "sequence": 63, "version": "v1", "wave": 2}
+{"family": "invoice", "payload": {"amount": 3319, "days_open": 17}, "reasoning_required": false, "request_id": "REQ-064", "sequence": 64, "version": "v1", "wave": 2}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 35}, "reasoning_required": false, "request_id": "REQ-065", "sequence": 65, "version": "v1", "wave": 2}
+{"family": "order", "payload": {"age_hours": 24, "priority": false}, "reasoning_required": false, "request_id": "REQ-066", "sequence": 66, "version": "v1", "wave": 2}
+{"family": "supplier", "payload": {"delivery": 94, "quality": 93}, "reasoning_required": false, "request_id": "REQ-067", "sequence": 67, "version": "v1", "wave": 2}
+{"family": "shipment", "payload": {"elapsed_hours": 41, "priority": true}, "reasoning_required": false, "request_id": "REQ-068", "sequence": 68, "version": "v1", "wave": 2}
+{"family": "shipment", "payload": {"elapsed_hours": 21, "priority": false}, "reasoning_required": false, "request_id": "REQ-069", "sequence": 69, "version": "v1", "wave": 2}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 47}, "reasoning_required": false, "request_id": "REQ-070", "sequence": 70, "version": "v1", "wave": 2}
+{"family": "inventory", "payload": {"on_hand": 158, "reorder_point": 69, "reserved": 9}, "reasoning_required": false, "request_id": "REQ-071", "sequence": 71, "version": "v1", "wave": 2}
+{"family": "customer", "payload": {"dispute": true, "risk_score": 31}, "reasoning_required": false, "request_id": "REQ-072", "sequence": 72, "version": "v1", "wave": 2}
+{"family": "shipment", "payload": {"elapsed_hours": 64, "priority": true}, "reasoning_required": false, "request_id": "REQ-073", "sequence": 73, "version": "v1", "wave": 2}
+{"family": "shipment", "payload": {"elapsed_hours": 54, "priority": true}, "reasoning_required": true, "request_id": "REQ-074", "sequence": 74, "version": "v1", "wave": 2}
+{"family": "invoice", "payload": {"amount": 8281, "days_open": 8}, "reasoning_required": false, "request_id": "REQ-075", "sequence": 75, "version": "v1", "wave": 2}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 9}, "reasoning_required": false, "request_id": "REQ-076", "sequence": 76, "version": "v1", "wave": 2}
+{"family": "inventory", "payload": {"on_hand": 103, "reorder_point": 74, "reserved": 34}, "reasoning_required": false, "request_id": "REQ-077", "sequence": 77, "version": "v1", "wave": 2}
+{"family": "invoice", "payload": {"amount": 4064, "days_open": 23}, "reasoning_required": false, "request_id": "REQ-078", "sequence": 78, "version": "v1", "wave": 2}
+{"family": "invoice", "payload": {"amount": 2517, "days_open": 18}, "reasoning_required": false, "request_id": "REQ-079", "sequence": 79, "version": "v1", "wave": 2}
+{"family": "supplier", "payload": {"delivery": 68, "quality": 76}, "reasoning_required": false, "request_id": "REQ-080", "sequence": 80, "version": "v1", "wave": 2}
+{"family": "supplier", "payload": {"delivery": 66, "quality": 94}, "reasoning_required": false, "request_id": "REQ-081", "sequence": 81, "version": "v1", "wave": 2}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 38}, "reasoning_required": false, "request_id": "REQ-082", "sequence": 82, "version": "v1", "wave": 2}
+{"family": "order", "payload": {"age_hours": 75, "priority": false}, "reasoning_required": false, "request_id": "REQ-083", "sequence": 83, "version": "v1", "wave": 2}
+{"family": "invoice", "payload": {"amount": 6527, "days_open": 18}, "reasoning_required": false, "request_id": "REQ-084", "sequence": 84, "version": "v1", "wave": 2}
+{"family": "inventory", "payload": {"on_hand": 50, "reorder_point": 27, "reserved": 37}, "reasoning_required": false, "request_id": "REQ-085", "sequence": 85, "version": "v1", "wave": 2}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 45}, "reasoning_required": false, "request_id": "REQ-086", "sequence": 86, "version": "v1", "wave": 2}
+{"family": "shipment", "payload": {"elapsed_hours": 56, "priority": false}, "reasoning_required": false, "request_id": "REQ-087", "sequence": 87, "version": "v1", "wave": 2}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 21}, "reasoning_required": false, "request_id": "REQ-088", "sequence": 88, "version": "v1", "wave": 2}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 68}, "reasoning_required": false, "request_id": "REQ-089", "sequence": 89, "version": "v1", "wave": 2}
+{"family": "invoice", "payload": {"amount": 3435, "days_open": 2}, "reasoning_required": false, "request_id": "REQ-090", "sequence": 90, "version": "v1", "wave": 2}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 54}, "reasoning_required": false, "request_id": "REQ-091", "sequence": 91, "version": "v1", "wave": 2}
+{"family": "inventory", "payload": {"on_hand": 105, "reorder_point": 52, "reserved": 14}, "reasoning_required": false, "request_id": "REQ-092", "sequence": 92, "version": "v1", "wave": 2}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 52}, "reasoning_required": false, "request_id": "REQ-093", "sequence": 93, "version": "v1", "wave": 2}
+{"family": "inventory", "payload": {"on_hand": 140, "reorder_point": 73, "reserved": 2}, "reasoning_required": false, "request_id": "REQ-094", "sequence": 94, "version": "v1", "wave": 2}
+{"family": "inventory", "payload": {"on_hand": 64, "reorder_point": 80, "reserved": 1}, "reasoning_required": false, "request_id": "REQ-095", "sequence": 95, "version": "v1", "wave": 2}
+{"family": "shipment", "payload": {"elapsed_hours": 39, "priority": true}, "reasoning_required": false, "request_id": "REQ-096", "sequence": 96, "version": "v1", "wave": 2}
+{"family": "supplier", "payload": {"delivery": 85, "quality": 66}, "reasoning_required": false, "request_id": "REQ-097", "sequence": 97, "version": "v1", "wave": 2}
+{"family": "order", "payload": {"age_hours": 77, "priority": false}, "reasoning_required": false, "request_id": "REQ-098", "sequence": 98, "version": "v1", "wave": 2}
+{"family": "order", "payload": {"age_hours": 18, "priority": false}, "reasoning_required": false, "request_id": "REQ-099", "sequence": 99, "version": "v1", "wave": 2}
+{"family": "order", "payload": {"age_hours": 24, "priority": false}, "reasoning_required": false, "request_id": "REQ-100", "sequence": 100, "version": "v1", "wave": 2}
+{"family": "order", "payload": {"age_hours": 13, "priority": false}, "reasoning_required": false, "request_id": "REQ-101", "sequence": 101, "version": "v1", "wave": 2}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 36}, "reasoning_required": false, "request_id": "REQ-102", "sequence": 102, "version": "v1", "wave": 2}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 30}, "reasoning_required": false, "request_id": "REQ-103", "sequence": 103, "version": "v1", "wave": 2}
+{"family": "invoice", "payload": {"amount": 8281, "days_open": 25}, "reasoning_required": false, "request_id": "REQ-104", "sequence": 104, "version": "v1", "wave": 2}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 49}, "reasoning_required": false, "request_id": "REQ-105", "sequence": 105, "version": "v1", "wave": 2}
+{"family": "invoice", "payload": {"amount": 8509, "days_open": 15}, "reasoning_required": false, "request_id": "REQ-106", "sequence": 106, "version": "v1", "wave": 2}
+{"family": "inventory", "payload": {"on_hand": 120, "reorder_point": 37, "reserved": 9}, "reasoning_required": false, "request_id": "REQ-107", "sequence": 107, "version": "v1", "wave": 2}
+{"family": "order", "payload": {"age_hours": 62, "priority": true}, "reasoning_required": false, "request_id": "REQ-108", "sequence": 108, "version": "v1", "wave": 2}
+{"family": "supplier", "payload": {"delivery": 69, "quality": 87}, "reasoning_required": true, "request_id": "REQ-109", "sequence": 109, "version": "v1", "wave": 2}
+{"family": "supplier", "payload": {"delivery": 99, "quality": 99}, "reasoning_required": false, "request_id": "REQ-110", "sequence": 110, "version": "v1", "wave": 2}
+{"family": "invoice", "payload": {"amount": 8250, "days_open": 3}, "reasoning_required": false, "request_id": "REQ-111", "sequence": 111, "version": "v1", "wave": 2}
+{"family": "inventory", "payload": {"on_hand": 85, "reorder_point": 66, "reserved": 13}, "reasoning_required": false, "request_id": "REQ-112", "sequence": 112, "version": "v1", "wave": 2}
+{"family": "inventory", "payload": {"on_hand": 98, "reorder_point": 47, "reserved": 40}, "reasoning_required": false, "request_id": "REQ-113", "sequence": 113, "version": "v1", "wave": 2}
+{"family": "supplier", "payload": {"delivery": 92, "quality": 92}, "reasoning_required": false, "request_id": "REQ-114", "sequence": 114, "version": "v1", "wave": 2}
+{"family": "shipment", "payload": {"elapsed_hours": 70, "priority": false}, "reasoning_required": false, "request_id": "REQ-115", "sequence": 115, "version": "v1", "wave": 2}
+{"family": "shipment", "payload": {"elapsed_hours": 26, "priority": false}, "reasoning_required": false, "request_id": "REQ-116", "sequence": 116, "version": "v1", "wave": 2}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 85}, "reasoning_required": false, "request_id": "REQ-117", "sequence": 117, "version": "v1", "wave": 2}
+{"family": "supplier", "payload": {"delivery": 77, "quality": 68}, "reasoning_required": false, "request_id": "REQ-118", "sequence": 118, "version": "v1", "wave": 2}
+{"family": "shipment", "payload": {"elapsed_hours": 73, "priority": true}, "reasoning_required": false, "request_id": "REQ-119", "sequence": 119, "version": "v1", "wave": 2}
+{"family": "supplier", "payload": {"delivery": 93, "quality": 65}, "reasoning_required": false, "request_id": "REQ-120", "sequence": 120, "version": "v1", "wave": 2}
+{"family": "shipment", "payload": {"elapsed_hours": 72, "priority": false}, "reasoning_required": false, "request_id": "REQ-121", "sequence": 121, "version": "v1", "wave": 3}
+{"family": "shipment", "payload": {"elapsed_hours": 88, "priority": false}, "reasoning_required": false, "request_id": "REQ-122", "sequence": 122, "version": "v1", "wave": 3}
+{"family": "shipment", "payload": {"elapsed_hours": 93, "priority": true}, "reasoning_required": false, "request_id": "REQ-123", "sequence": 123, "version": "v1", "wave": 3}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 32}, "reasoning_required": false, "request_id": "REQ-124", "sequence": 124, "version": "v1", "wave": 3}
+{"family": "order", "payload": {"age_hours": 67, "priority": true}, "reasoning_required": false, "request_id": "REQ-125", "sequence": 125, "version": "v2", "wave": 3}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 12}, "reasoning_required": false, "request_id": "REQ-126", "sequence": 126, "version": "v1", "wave": 3}
+{"family": "order", "payload": {"age_hours": 27, "priority": false}, "reasoning_required": false, "request_id": "REQ-127", "sequence": 127, "version": "v2", "wave": 3}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 3}, "reasoning_required": false, "request_id": "REQ-128", "sequence": 128, "version": "v1", "wave": 3}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 31}, "reasoning_required": false, "request_id": "REQ-129", "sequence": 129, "version": "v1", "wave": 3}
+{"family": "shipment", "payload": {"elapsed_hours": 28, "priority": false}, "reasoning_required": false, "request_id": "REQ-130", "sequence": 130, "version": "v1", "wave": 3}
+{"family": "order", "payload": {"age_hours": 19, "priority": false}, "reasoning_required": false, "request_id": "REQ-131", "sequence": 131, "version": "v2", "wave": 3}
+{"family": "invoice", "payload": {"amount": 7939, "days_open": 3}, "reasoning_required": false, "request_id": "REQ-132", "sequence": 132, "version": "v2", "wave": 3}
+{"family": "order", "payload": {"age_hours": 48, "priority": true}, "reasoning_required": false, "request_id": "REQ-133", "sequence": 133, "version": "v2", "wave": 3}
+{"family": "supplier", "payload": {"delivery": 96, "quality": 80}, "reasoning_required": false, "request_id": "REQ-134", "sequence": 134, "version": "v2", "wave": 3}
+{"family": "shipment", "payload": {"elapsed_hours": 41, "priority": true}, "reasoning_required": false, "request_id": "REQ-135", "sequence": 135, "version": "v1", "wave": 3}
+{"family": "shipment", "payload": {"elapsed_hours": 93, "priority": false}, "reasoning_required": false, "request_id": "REQ-136", "sequence": 136, "version": "v1", "wave": 3}
+{"family": "invoice", "payload": {"amount": 8434, "days_open": 21}, "reasoning_required": true, "request_id": "REQ-137", "sequence": 137, "version": "v2", "wave": 3}
+{"family": "supplier", "payload": {"delivery": 92, "quality": 70}, "reasoning_required": false, "request_id": "REQ-138", "sequence": 138, "version": "v2", "wave": 3}
+{"family": "supplier", "payload": {"delivery": 94, "quality": 67}, "reasoning_required": false, "request_id": "REQ-139", "sequence": 139, "version": "v2", "wave": 3}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 40}, "reasoning_required": false, "request_id": "REQ-140", "sequence": 140, "version": "v1", "wave": 3}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 22}, "reasoning_required": false, "request_id": "REQ-141", "sequence": 141, "version": "v1", "wave": 3}
+{"family": "invoice", "payload": {"amount": 4791, "days_open": 19}, "reasoning_required": false, "request_id": "REQ-142", "sequence": 142, "version": "v2", "wave": 3}
+{"family": "supplier", "payload": {"delivery": 68, "quality": 70}, "reasoning_required": false, "request_id": "REQ-143", "sequence": 143, "version": "v2", "wave": 3}
+{"family": "order", "payload": {"age_hours": 74, "priority": false}, "reasoning_required": false, "request_id": "REQ-144", "sequence": 144, "version": "v2", "wave": 3}
+{"family": "shipment", "payload": {"elapsed_hours": 82, "priority": false}, "reasoning_required": false, "request_id": "REQ-145", "sequence": 145, "version": "v1", "wave": 3}
+{"family": "order", "payload": {"age_hours": 69, "priority": false}, "reasoning_required": false, "request_id": "REQ-146", "sequence": 146, "version": "v2", "wave": 3}
+{"family": "invoice", "payload": {"amount": 877, "days_open": 9}, "reasoning_required": false, "request_id": "REQ-147", "sequence": 147, "version": "v2", "wave": 3}
+{"family": "invoice", "payload": {"amount": 7886, "days_open": 13}, "reasoning_required": false, "request_id": "REQ-148", "sequence": 148, "version": "v2", "wave": 3}
+{"family": "invoice", "payload": {"amount": 8158, "days_open": 6}, "reasoning_required": false, "request_id": "REQ-149", "sequence": 149, "version": "v2", "wave": 3}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 42}, "reasoning_required": false, "request_id": "REQ-150", "sequence": 150, "version": "v1", "wave": 3}
+{"family": "order", "payload": {"age_hours": 24, "priority": false}, "reasoning_required": false, "request_id": "REQ-151", "sequence": 151, "version": "v2", "wave": 3}
+{"family": "inventory", "payload": {"on_hand": 133, "reorder_point": 64, "reserved": 23}, "reasoning_required": false, "request_id": "REQ-152", "sequence": 152, "version": "v1", "wave": 3}
+{"family": "order", "payload": {"age_hours": 37, "priority": false}, "reasoning_required": false, "request_id": "REQ-153", "sequence": 153, "version": "v2", "wave": 3}
+{"family": "supplier", "payload": {"delivery": 85, "quality": 85}, "reasoning_required": false, "request_id": "REQ-154", "sequence": 154, "version": "v2", "wave": 3}
+{"family": "inventory", "payload": {"on_hand": 83, "reorder_point": 78, "reserved": 22}, "reasoning_required": false, "request_id": "REQ-155", "sequence": 155, "version": "v1", "wave": 3}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 81}, "reasoning_required": false, "request_id": "REQ-156", "sequence": 156, "version": "v1", "wave": 3}
+{"family": "shipment", "payload": {"elapsed_hours": 82, "priority": true}, "reasoning_required": false, "request_id": "REQ-157", "sequence": 157, "version": "v1", "wave": 3}
+{"family": "inventory", "payload": {"on_hand": 107, "reorder_point": 52, "reserved": 23}, "reasoning_required": false, "request_id": "REQ-158", "sequence": 158, "version": "v1", "wave": 3}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 57}, "reasoning_required": false, "request_id": "REQ-159", "sequence": 159, "version": "v1", "wave": 3}
+{"family": "shipment", "payload": {"elapsed_hours": 88, "priority": false}, "reasoning_required": false, "request_id": "REQ-160", "sequence": 160, "version": "v1", "wave": 3}
+{"family": "invoice", "payload": {"amount": 3668, "days_open": 16}, "reasoning_required": false, "request_id": "REQ-161", "sequence": 161, "version": "v2", "wave": 3}
+{"family": "order", "payload": {"age_hours": 12, "priority": false}, "reasoning_required": false, "request_id": "REQ-162", "sequence": 162, "version": "v2", "wave": 3}
+{"family": "supplier", "payload": {"delivery": 95, "quality": 71}, "reasoning_required": false, "request_id": "REQ-163", "sequence": 163, "version": "v2", "wave": 3}
+{"family": "invoice", "payload": {"amount": 2289, "days_open": 3}, "reasoning_required": false, "request_id": "REQ-164", "sequence": 164, "version": "v2", "wave": 3}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 24}, "reasoning_required": false, "request_id": "REQ-165", "sequence": 165, "version": "v1", "wave": 3}
+{"family": "supplier", "payload": {"delivery": 100, "quality": 93}, "reasoning_required": true, "request_id": "REQ-166", "sequence": 166, "version": "v2", "wave": 3}
+{"family": "supplier", "payload": {"delivery": 66, "quality": 67}, "reasoning_required": false, "request_id": "REQ-167", "sequence": 167, "version": "v2", "wave": 3}
+{"family": "invoice", "payload": {"amount": 915, "days_open": 6}, "reasoning_required": false, "request_id": "REQ-168", "sequence": 168, "version": "v2", "wave": 3}
+{"family": "inventory", "payload": {"on_hand": 124, "reorder_point": 55, "reserved": 28}, "reasoning_required": false, "request_id": "REQ-169", "sequence": 169, "version": "v1", "wave": 3}
+{"family": "inventory", "payload": {"on_hand": 56, "reorder_point": 49, "reserved": 0}, "reasoning_required": false, "request_id": "REQ-170", "sequence": 170, "version": "v1", "wave": 3}
+{"family": "supplier", "payload": {"delivery": 72, "quality": 95}, "reasoning_required": false, "request_id": "REQ-171", "sequence": 171, "version": "v2", "wave": 3}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 87}, "reasoning_required": false, "request_id": "REQ-172", "sequence": 172, "version": "v1", "wave": 3}
+{"family": "order", "payload": {"age_hours": 66, "priority": false}, "reasoning_required": false, "request_id": "REQ-173", "sequence": 173, "version": "v2", "wave": 3}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 48}, "reasoning_required": false, "request_id": "REQ-174", "sequence": 174, "version": "v1", "wave": 3}
+{"family": "inventory", "payload": {"on_hand": 124, "reorder_point": 79, "reserved": 21}, "reasoning_required": false, "request_id": "REQ-175", "sequence": 175, "version": "v1", "wave": 3}
+{"family": "inventory", "payload": {"on_hand": 81, "reorder_point": 50, "reserved": 13}, "reasoning_required": false, "request_id": "REQ-176", "sequence": 176, "version": "v1", "wave": 3}
+{"family": "invoice", "payload": {"amount": 6826, "days_open": 17}, "reasoning_required": false, "request_id": "REQ-177", "sequence": 177, "version": "v2", "wave": 3}
+{"family": "inventory", "payload": {"on_hand": 114, "reorder_point": 57, "reserved": 27}, "reasoning_required": false, "request_id": "REQ-178", "sequence": 178, "version": "v1", "wave": 3}
+{"family": "supplier", "payload": {"delivery": 99, "quality": 96}, "reasoning_required": false, "request_id": "REQ-179", "sequence": 179, "version": "v2", "wave": 3}
+{"family": "inventory", "payload": {"on_hand": 31, "reorder_point": 84, "reserved": 15}, "reasoning_required": false, "request_id": "REQ-180", "sequence": 180, "version": "v1", "wave": 3}
+{"family": "invoice", "payload": {"amount": 5404, "days_open": 5}, "reasoning_required": false, "request_id": "REQ-181", "sequence": 181, "version": "v2", "wave": 4}
+{"family": "invoice", "payload": {"amount": 4644, "days_open": 10}, "reasoning_required": false, "request_id": "REQ-182", "sequence": 182, "version": "v2", "wave": 4}
+{"family": "capacity", "payload": {"capacity_units": 806, "projected_units": 930}, "reasoning_required": false, "request_id": "REQ-183", "sequence": 183, "version": "v1", "wave": 4}
+{"family": "order", "payload": {"age_hours": 25, "priority": true}, "reasoning_required": false, "request_id": "REQ-184", "sequence": 184, "version": "v2", "wave": 4}
+{"family": "capacity", "payload": {"capacity_units": 790, "projected_units": 1182}, "reasoning_required": false, "request_id": "REQ-185", "sequence": 185, "version": "v1", "wave": 4}
+{"family": "shipment", "payload": {"elapsed_hours": 23, "priority": true}, "reasoning_required": false, "request_id": "REQ-186", "sequence": 186, "version": "v1", "wave": 4}
+{"family": "inventory", "payload": {"on_hand": 71, "reorder_point": 60, "reserved": 15}, "reasoning_required": false, "request_id": "REQ-187", "sequence": 187, "version": "v1", "wave": 4}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 8}, "reasoning_required": false, "request_id": "REQ-188", "sequence": 188, "version": "v1", "wave": 4}
+{"family": "capacity", "payload": {"capacity_units": 1368, "projected_units": 944}, "reasoning_required": false, "request_id": "REQ-189", "sequence": 189, "version": "v1", "wave": 4}
+{"family": "shipment", "payload": {"elapsed_hours": 67, "priority": true}, "reasoning_required": false, "request_id": "REQ-190", "sequence": 190, "version": "v1", "wave": 4}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 56}, "reasoning_required": false, "request_id": "REQ-191", "sequence": 191, "version": "v1", "wave": 4}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 77}, "reasoning_required": false, "request_id": "REQ-192", "sequence": 192, "version": "v1", "wave": 4}
+{"family": "invoice", "payload": {"amount": 3089, "days_open": 21}, "reasoning_required": false, "request_id": "REQ-193", "sequence": 193, "version": "v2", "wave": 4}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 53}, "reasoning_required": false, "request_id": "REQ-194", "sequence": 194, "version": "v1", "wave": 4}
+{"family": "shipment", "payload": {"elapsed_hours": 56, "priority": false}, "reasoning_required": false, "request_id": "REQ-195", "sequence": 195, "version": "v1", "wave": 4}
+{"family": "customer", "payload": {"dispute": true, "risk_score": 44}, "reasoning_required": false, "request_id": "REQ-196", "sequence": 196, "version": "v1", "wave": 4}
+{"family": "order", "payload": {"age_hours": 51, "priority": false}, "reasoning_required": false, "request_id": "REQ-197", "sequence": 197, "version": "v2", "wave": 4}
+{"family": "order", "payload": {"age_hours": 75, "priority": false}, "reasoning_required": false, "request_id": "REQ-198", "sequence": 198, "version": "v2", "wave": 4}
+{"family": "order", "payload": {"age_hours": 37, "priority": false}, "reasoning_required": false, "request_id": "REQ-199", "sequence": 199, "version": "v2", "wave": 4}
+{"family": "invoice", "payload": {"amount": 1205, "days_open": 21}, "reasoning_required": false, "request_id": "REQ-200", "sequence": 200, "version": "v2", "wave": 4}
+{"family": "order", "payload": {"age_hours": 80, "priority": false}, "reasoning_required": false, "request_id": "REQ-201", "sequence": 201, "version": "v2", "wave": 4}
+{"family": "shipment", "payload": {"elapsed_hours": 61, "priority": true}, "reasoning_required": false, "request_id": "REQ-202", "sequence": 202, "version": "v1", "wave": 4}
+{"family": "capacity", "payload": {"capacity_units": 661, "projected_units": 1091}, "reasoning_required": true, "request_id": "REQ-203", "sequence": 203, "version": "v1", "wave": 4}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 55}, "reasoning_required": false, "request_id": "REQ-204", "sequence": 204, "version": "v1", "wave": 4}
+{"family": "capacity", "payload": {"capacity_units": 1288, "projected_units": 1097}, "reasoning_required": false, "request_id": "REQ-205", "sequence": 205, "version": "v1", "wave": 4}
+{"family": "invoice", "payload": {"amount": 1286, "days_open": 6}, "reasoning_required": false, "request_id": "REQ-206", "sequence": 206, "version": "v2", "wave": 4}
+{"family": "invoice", "payload": {"amount": 645, "days_open": 10}, "reasoning_required": false, "request_id": "REQ-207", "sequence": 207, "version": "v2", "wave": 4}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 62}, "reasoning_required": false, "request_id": "REQ-208", "sequence": 208, "version": "v1", "wave": 4}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 88}, "reasoning_required": false, "request_id": "REQ-209", "sequence": 209, "version": "v1", "wave": 4}
+{"family": "supplier", "payload": {"delivery": 83, "quality": 85}, "reasoning_required": false, "request_id": "REQ-210", "sequence": 210, "version": "v2", "wave": 4}
+{"family": "customer", "payload": {"dispute": true, "risk_score": 93}, "reasoning_required": false, "request_id": "REQ-211", "sequence": 211, "version": "v1", "wave": 4}
+{"family": "supplier", "payload": {"delivery": 85, "quality": 68}, "reasoning_required": false, "request_id": "REQ-212", "sequence": 212, "version": "v2", "wave": 4}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 4}, "reasoning_required": false, "request_id": "REQ-213", "sequence": 213, "version": "v1", "wave": 4}
+{"family": "supplier", "payload": {"delivery": 92, "quality": 100}, "reasoning_required": false, "request_id": "REQ-214", "sequence": 214, "version": "v2", "wave": 4}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 44}, "reasoning_required": false, "request_id": "REQ-215", "sequence": 215, "version": "v1", "wave": 4}
+{"family": "capacity", "payload": {"capacity_units": 1130, "projected_units": 814}, "reasoning_required": false, "request_id": "REQ-216", "sequence": 216, "version": "v1", "wave": 4}
+{"family": "order", "payload": {"age_hours": 24, "priority": true}, "reasoning_required": false, "request_id": "REQ-217", "sequence": 217, "version": "v2", "wave": 4}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 11}, "reasoning_required": false, "request_id": "REQ-218", "sequence": 218, "version": "v1", "wave": 4}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 92}, "reasoning_required": false, "request_id": "REQ-219", "sequence": 219, "version": "v1", "wave": 4}
+{"family": "supplier", "payload": {"delivery": 81, "quality": 100}, "reasoning_required": false, "request_id": "REQ-220", "sequence": 220, "version": "v2", "wave": 4}
+{"family": "inventory", "payload": {"on_hand": 33, "reorder_point": 42, "reserved": 3}, "reasoning_required": false, "request_id": "REQ-221", "sequence": 221, "version": "v1", "wave": 4}
+{"family": "invoice", "payload": {"amount": 3437, "days_open": 17}, "reasoning_required": false, "request_id": "REQ-222", "sequence": 222, "version": "v2", "wave": 4}
+{"family": "shipment", "payload": {"elapsed_hours": 26, "priority": true}, "reasoning_required": false, "request_id": "REQ-223", "sequence": 223, "version": "v1", "wave": 4}
+{"family": "shipment", "payload": {"elapsed_hours": 49, "priority": false}, "reasoning_required": false, "request_id": "REQ-224", "sequence": 224, "version": "v1", "wave": 4}
+{"family": "supplier", "payload": {"delivery": 78, "quality": 87}, "reasoning_required": false, "request_id": "REQ-225", "sequence": 225, "version": "v2", "wave": 4}
+{"family": "inventory", "payload": {"on_hand": 38, "reorder_point": 43, "reserved": 32}, "reasoning_required": false, "request_id": "REQ-226", "sequence": 226, "version": "v1", "wave": 4}
+{"family": "inventory", "payload": {"on_hand": 88, "reorder_point": 43, "reserved": 40}, "reasoning_required": false, "request_id": "REQ-227", "sequence": 227, "version": "v1", "wave": 4}
+{"family": "inventory", "payload": {"on_hand": 37, "reorder_point": 62, "reserved": 16}, "reasoning_required": true, "request_id": "REQ-228", "sequence": 228, "version": "v1", "wave": 4}
+{"family": "supplier", "payload": {"delivery": 72, "quality": 91}, "reasoning_required": false, "request_id": "REQ-229", "sequence": 229, "version": "v2", "wave": 4}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 55}, "reasoning_required": false, "request_id": "REQ-230", "sequence": 230, "version": "v1", "wave": 4}
+{"family": "capacity", "payload": {"capacity_units": 733, "projected_units": 1052}, "reasoning_required": false, "request_id": "REQ-231", "sequence": 231, "version": "v1", "wave": 4}
+{"family": "supplier", "payload": {"delivery": 94, "quality": 87}, "reasoning_required": false, "request_id": "REQ-232", "sequence": 232, "version": "v2", "wave": 4}
+{"family": "capacity", "payload": {"capacity_units": 1188, "projected_units": 1604}, "reasoning_required": false, "request_id": "REQ-233", "sequence": 233, "version": "v1", "wave": 4}
+{"family": "inventory", "payload": {"on_hand": 102, "reorder_point": 69, "reserved": 25}, "reasoning_required": false, "request_id": "REQ-234", "sequence": 234, "version": "v1", "wave": 4}
+{"family": "inventory", "payload": {"on_hand": 101, "reorder_point": 37, "reserved": 27}, "reasoning_required": false, "request_id": "REQ-235", "sequence": 235, "version": "v1", "wave": 4}
+{"family": "inventory", "payload": {"on_hand": 28, "reorder_point": 69, "reserved": 16}, "reasoning_required": false, "request_id": "REQ-236", "sequence": 236, "version": "v1", "wave": 4}
+{"family": "returns", "payload": {"damaged": false, "days_since_delivery": 45}, "reasoning_required": false, "request_id": "REQ-237", "sequence": 237, "version": "v1", "wave": 4}
+{"family": "shipment", "payload": {"elapsed_hours": 59, "priority": false}, "reasoning_required": false, "request_id": "REQ-238", "sequence": 238, "version": "v1", "wave": 4}
+{"family": "shipment", "payload": {"elapsed_hours": 64, "priority": true}, "reasoning_required": false, "request_id": "REQ-239", "sequence": 239, "version": "v1", "wave": 4}
+{"family": "order", "payload": {"age_hours": 58, "priority": false}, "reasoning_required": false, "request_id": "REQ-240", "sequence": 240, "version": "v2", "wave": 4}

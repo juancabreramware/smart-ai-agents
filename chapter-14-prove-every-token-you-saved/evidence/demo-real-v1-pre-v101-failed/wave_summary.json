@@ -1,0 +1,13 @@
+[
+  {
+    "baseline_attempts": 32,
+    "baseline_provider_cost_micro": 0,
+    "baseline_tokens": 0,
+    "requests": 16,
+    "smart_attempts": 32,
+    "smart_provider_cost_micro": 0,
+    "smart_reuses": 0,
+    "smart_tokens": 0,
+    "wave": 1
+  }
+]

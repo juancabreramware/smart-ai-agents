@@ -1,0 +1,12 @@
+{
+  "assigned_costs_micro": {
+    "capability_acquisition_micro": 180,
+    "capability_validation_micro": 120,
+    "deterministic_execution_micro": 25,
+    "invalidation_micro": 60,
+    "registry_operation_micro": 5,
+    "relearning_micro": 250
+  },
+  "note": "Benchmark-assigned non-provider costs; not measured market costs.",
+  "version": "chapter14-cost-manifest-v1.0.0"
+}

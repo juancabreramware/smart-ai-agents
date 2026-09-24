@@ -1,0 +1,28 @@
+{
+  "errors": [],
+  "passed": true,
+  "recomputed": {
+    "baseline": {
+      "attempts": 32,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_cost_micro": 0,
+      "successful_calls": 0,
+      "total_tokens": 0
+    },
+    "correct_baseline": 0,
+    "correct_smart": 0,
+    "deterministic_reuses": 0,
+    "full_benchmark_savings_micro": -80,
+    "provider_savings_micro": 0,
+    "request_count": 16,
+    "smart": {
+      "attempts": 32,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "provider_cost_micro": 0,
+      "successful_calls": 0,
+      "total_tokens": 0
+    }
+  }
+}

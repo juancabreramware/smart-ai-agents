@@ -1,0 +1,47 @@
+{
+  "compounding_smart": {
+    "accuracy": 1.0,
+    "correct": 16,
+    "deterministic_reuses": 7,
+    "input_tokens": 1370,
+    "llm_calls": 9,
+    "llm_calls_per_request": 0.5625,
+    "output_tokens": 1464,
+    "provider_cost_micro": 3270,
+    "provider_cost_micro_per_request": 204.375,
+    "requests": 16,
+    "stale_reuse_errors": 0,
+    "tokens_per_request": 177.125,
+    "total_tokens": 2834
+  },
+  "episodic_reuse": {
+    "accuracy": 1.0,
+    "correct": 16,
+    "deterministic_reuses": 7,
+    "input_tokens": 1370,
+    "llm_calls": 9,
+    "llm_calls_per_request": 0.5625,
+    "output_tokens": 1474,
+    "provider_cost_micro": 3290,
+    "provider_cost_micro_per_request": 205.625,
+    "requests": 16,
+    "stale_reuse_errors": 0,
+    "tokens_per_request": 177.75,
+    "total_tokens": 2844
+  },
+  "stateless_reason": {
+    "accuracy": 1.0,
+    "correct": 16,
+    "deterministic_reuses": 0,
+    "input_tokens": 2447,
+    "llm_calls": 16,
+    "llm_calls_per_request": 1.0,
+    "output_tokens": 2541,
+    "provider_cost_micro": 5694,
+    "provider_cost_micro_per_request": 355.875,
+    "requests": 16,
+    "stale_reuse_errors": 0,
+    "tokens_per_request": 311.75,
+    "total_tokens": 4988
+  }
+}

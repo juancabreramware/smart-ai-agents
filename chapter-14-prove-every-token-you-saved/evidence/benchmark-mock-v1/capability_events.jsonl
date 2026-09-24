@@ -1,0 +1,14 @@
+{"assigned_cost_micro": 300, "capability_id": "inventory:inventory_reorder:v1", "contract_version": "v1", "event": "PROMOTE", "family": "inventory", "request_id": "REQ-0007", "seq": 7}
+{"assigned_cost_micro": 300, "capability_id": "shipment:shipment_escalate:v1", "contract_version": "v1", "event": "PROMOTE", "family": "shipment", "request_id": "REQ-0008", "seq": 8}
+{"assigned_cost_micro": 300, "capability_id": "invoice:invoice_escalate:v1", "contract_version": "v1", "event": "PROMOTE", "family": "invoice", "request_id": "REQ-0009", "seq": 9}
+{"assigned_cost_micro": 300, "capability_id": "supplier:supplier_review:v1", "contract_version": "v1", "event": "PROMOTE", "family": "supplier", "request_id": "REQ-0010", "seq": 10}
+{"assigned_cost_micro": 300, "capability_id": "customer:customer_manual_review:v1", "contract_version": "v1", "event": "PROMOTE", "family": "customer", "request_id": "REQ-0011", "seq": 11}
+{"assigned_cost_micro": 300, "capability_id": "order:order_priority:v1", "contract_version": "v1", "event": "PROMOTE", "family": "order", "request_id": "REQ-0012", "seq": 12}
+{"assigned_cost_micro": 300, "capability_id": "returns:return_approve:v1", "contract_version": "v1", "event": "PROMOTE", "family": "returns", "request_id": "REQ-0070", "seq": 70}
+{"assigned_cost_micro": 60, "event": "INVALIDATE", "family": "invoice", "old_capability_id": "invoice:invoice_escalate:v1", "reason": "contract_changed", "request_id": "REQ-0123", "seq": 123}
+{"assigned_cost_micro": 300, "capability_id": "invoice:invoice_escalate:v2", "contract_version": "v2", "event": "PROMOTE", "family": "invoice", "request_id": "REQ-0123", "seq": 123}
+{"assigned_cost_micro": 60, "event": "INVALIDATE", "family": "supplier", "old_capability_id": "supplier:supplier_review:v1", "reason": "contract_changed", "request_id": "REQ-0124", "seq": 124}
+{"assigned_cost_micro": 300, "capability_id": "supplier:supplier_review:v2", "contract_version": "v2", "event": "PROMOTE", "family": "supplier", "request_id": "REQ-0124", "seq": 124}
+{"assigned_cost_micro": 60, "event": "INVALIDATE", "family": "order", "old_capability_id": "order:order_priority:v1", "reason": "contract_changed", "request_id": "REQ-0126", "seq": 126}
+{"assigned_cost_micro": 300, "capability_id": "order:order_priority:v2", "contract_version": "v2", "event": "PROMOTE", "family": "order", "request_id": "REQ-0126", "seq": 126}
+{"assigned_cost_micro": 300, "capability_id": "capacity:capacity_overflow:v1", "contract_version": "v1", "event": "PROMOTE", "family": "capacity", "request_id": "REQ-0190", "seq": 190}

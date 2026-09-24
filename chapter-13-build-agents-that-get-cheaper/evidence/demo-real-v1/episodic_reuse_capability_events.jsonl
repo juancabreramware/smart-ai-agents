@@ -1,0 +1,11 @@
+{"capability_id": "inventory:v1", "event": "PROMOTE", "family": "inventory", "operation": "inventory_reorder", "request_id": "REQ-004", "sequence": 4, "version": "v1", "wave": 1}
+{"capability_id": "inventory:v1", "event": "REUSE", "family": "inventory", "request_id": "REQ-006", "reuse_count": 1, "sequence": 6, "version": "v1", "wave": 1}
+{"capability_id": "inventory:v1", "event": "REUSE", "family": "inventory", "request_id": "REQ-007", "reuse_count": 2, "sequence": 7, "version": "v1", "wave": 1}
+{"capability_id": "invoice:v1", "event": "PROMOTE", "family": "invoice", "operation": "invoice_escalate", "request_id": "REQ-008", "sequence": 8, "version": "v1", "wave": 1}
+{"capability_id": "invoice:v1", "event": "REUSE", "family": "invoice", "request_id": "REQ-009", "reuse_count": 1, "sequence": 9, "version": "v1", "wave": 1}
+{"capability_id": "inventory:v1", "event": "REUSE", "family": "inventory", "request_id": "REQ-011", "reuse_count": 3, "sequence": 11, "version": "v1", "wave": 1}
+{"capability_id": "inventory:v1", "event": "REUSE", "family": "inventory", "request_id": "REQ-012", "reuse_count": 4, "sequence": 12, "version": "v1", "wave": 1}
+{"capability_id": "customer:v1", "event": "PROMOTE", "family": "customer", "operation": "customer_manual_review", "request_id": "REQ-013", "sequence": 13, "version": "v1", "wave": 1}
+{"capability_id": "inventory:v1", "event": "REUSE", "family": "inventory", "request_id": "REQ-014", "reuse_count": 5, "sequence": 14, "version": "v1", "wave": 1}
+{"capability_id": "shipment:v1", "event": "PROMOTE", "family": "shipment", "operation": "shipment_escalate", "request_id": "REQ-015", "sequence": 15, "version": "v1", "wave": 1}
+{"capability_id": "customer:v1", "event": "REUSE", "family": "customer", "request_id": "REQ-016", "reuse_count": 1, "sequence": 16, "version": "v1", "wave": 1}

@@ -1,0 +1,16 @@
+{"family": "shipment", "payload": {"elapsed_hours": 32, "priority": false}, "reasoning_required": false, "request_id": "REQ-001", "sequence": 1, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 1195, "days_open": 2}, "reasoning_required": false, "request_id": "REQ-002", "sequence": 2, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 107, "reorder_point": 81, "reserved": 2}, "reasoning_required": false, "request_id": "REQ-003", "sequence": 3, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 80, "reorder_point": 48, "reserved": 12}, "reasoning_required": false, "request_id": "REQ-004", "sequence": 4, "version": "v1", "wave": 1}
+{"family": "supplier", "payload": {"delivery": 100, "quality": 69}, "reasoning_required": false, "request_id": "REQ-005", "sequence": 5, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 76, "reorder_point": 40, "reserved": 11}, "reasoning_required": false, "request_id": "REQ-006", "sequence": 6, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 27, "reorder_point": 49, "reserved": 2}, "reasoning_required": false, "request_id": "REQ-007", "sequence": 7, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 561, "days_open": 8}, "reasoning_required": false, "request_id": "REQ-008", "sequence": 8, "version": "v1", "wave": 1}
+{"family": "invoice", "payload": {"amount": 836, "days_open": 17}, "reasoning_required": false, "request_id": "REQ-009", "sequence": 9, "version": "v1", "wave": 1}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 23}, "reasoning_required": false, "request_id": "REQ-010", "sequence": 10, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 115, "reorder_point": 89, "reserved": 10}, "reasoning_required": false, "request_id": "REQ-011", "sequence": 11, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 84, "reorder_point": 41, "reserved": 36}, "reasoning_required": false, "request_id": "REQ-012", "sequence": 12, "version": "v1", "wave": 1}
+{"family": "customer", "payload": {"dispute": true, "risk_score": 35}, "reasoning_required": false, "request_id": "REQ-013", "sequence": 13, "version": "v1", "wave": 1}
+{"family": "inventory", "payload": {"on_hand": 20, "reorder_point": 29, "reserved": 14}, "reasoning_required": false, "request_id": "REQ-014", "sequence": 14, "version": "v1", "wave": 1}
+{"family": "shipment", "payload": {"elapsed_hours": 42, "priority": true}, "reasoning_required": false, "request_id": "REQ-015", "sequence": 15, "version": "v1", "wave": 1}
+{"family": "customer", "payload": {"dispute": false, "risk_score": 23}, "reasoning_required": false, "request_id": "REQ-016", "sequence": 16, "version": "v1", "wave": 1}

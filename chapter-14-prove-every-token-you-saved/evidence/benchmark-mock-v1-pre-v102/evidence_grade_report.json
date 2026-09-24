@@ -1,0 +1,28 @@
+{
+  "avoided_calls_attributed": 213,
+  "baseline": {
+    "attempts": 244,
+    "input_tokens": 81327,
+    "output_tokens": 29033,
+    "provider_cost_micro": 77991,
+    "successful_calls": 240,
+    "total_tokens": 110360
+  },
+  "correct_baseline": 240,
+  "correct_smart": 240,
+  "deterministic_reuses": 213,
+  "evidence_coverage_pct": 100.0,
+  "full_benchmark_savings_micro": 58835,
+  "provider_savings_micro": 69410,
+  "request_count": 240,
+  "savings_overstatement_micro": 10575,
+  "smart": {
+    "attempts": 27,
+    "input_tokens": 8939,
+    "output_tokens": 3186,
+    "provider_cost_micro": 8581,
+    "successful_calls": 27,
+    "total_tokens": 12125
+  },
+  "smart_assigned_nonprovider_cost_micro": 10575
+}

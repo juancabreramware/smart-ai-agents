@@ -1,0 +1,18 @@
+{
+  "canonical_request_count": 240,
+  "canonical_workload_hash": "b5f82e3ff270aff7edc9ee9e36e9f732befc1a5ed161bd79e509b3597f166847",
+  "input_usd_per_million": 0.25,
+  "mode": "demo",
+  "model": "gpt-5-mini",
+  "output_usd_per_million": 2.0,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "policy_hash": "70c1eab22c6273df364f69183b80242a662210cabc238c566cc1e2c56e896bfc",
+  "policy_version": "chapter13-capability-policy-v1.0.0",
+  "provider": "openai",
+  "public_contract_hash": "10e57f3758ee8ed88777c3d58086b0d9c8b9e950b6a88e9f3642681b1c9224b3",
+  "public_contract_version": "chapter13-public-contract-v1.0.0",
+  "python": "3.13.1",
+  "request_count": 16,
+  "run_id": "ch13-96958f501e90",
+  "workload_version": "chapter13-workload-v1.0.0"
+}

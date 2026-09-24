@@ -1,0 +1,17 @@
+{
+  "pricing": {
+    "P1": {
+      "gpt-5-mini": {
+        "input_per_million": 250000,
+        "output_per_million": 2000000
+      }
+    },
+    "P2": {
+      "gpt-5-mini": {
+        "input_per_million": 300000,
+        "output_per_million": 1800000
+      }
+    }
+  },
+  "version": "chapter14-pricing-v1.0.0"
+}
